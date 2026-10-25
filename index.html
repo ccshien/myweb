@@ -1814,6 +1814,29 @@ body{color:var(--ux-text)}
   .budget-back-top{transition:none}
 }
 
+
+/* Minimal Android / LINE WebView compatibility fix.
+   Keep layout widths and all playback JavaScript unchanged. */
+html{
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+.now-next-card > span:last-child{
+  min-width:0;
+}
+.now-next-main,
+.now-next-sub{
+  display:block;
+}
+
+
+/* Keep the Now/Next status card full-width across Chrome and LINE WebView */
+.now-next-card{
+  width:100%;
+  box-sizing:border-box;
+  text-align:left;
+}
+
 </style>
 </head>
 <body>
