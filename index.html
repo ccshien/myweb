@@ -2177,6 +2177,281 @@ body.attraction-sheet-open{overflow:hidden}
   text-decoration:none;
 }
 
+
+.attraction-must-copy{
+  min-width:0;
+  display:block;
+}
+.attraction-must-copy b{
+  display:block;
+  color:#123958;
+  font-size:10px;
+  font-weight:900;
+  line-height:1.35;
+}
+.attraction-must-copy span{
+  display:block;
+  margin-top:3px;
+  color:#4f6f89;
+  font-size:9px;
+  font-weight:650;
+  line-height:1.55;
+}
+
+
+/* Mobile readability: enlarge secondary/small text only */
+@media(max-width:640px){
+
+  /* Bottom-sheet section labels and explanatory text */
+  .attraction-sheet-kicker{font-size:11px}
+  .attraction-section-title{font-size:11px}
+  .attraction-lead{font-size:13px;line-height:1.72}
+  .attraction-fact b{font-size:10px}
+  .attraction-fact span{font-size:12px}
+  .attraction-must-copy b{font-size:11px}
+  .attraction-must-copy span{font-size:10.5px;line-height:1.58}
+  .attraction-route{font-size:11px;line-height:1.65}
+  .attraction-tip{font-size:11px;line-height:1.65}
+  .attraction-official{font-size:11px}
+  .food-rec-badge{font-size:10px}
+  .food-rec-meta{font-size:10px}
+  .food-rec-price{font-size:10px}
+  .food-rec-dishes span{font-size:9px}
+  .food-rec-dishes b{font-size:10px}
+  .food-rec-desc{font-size:11px;line-height:1.58}
+  .food-rec-link{font-size:10px}
+  .price-current-note{font-size:10px}
+
+  /* Timeline transport details */
+  .transport-route{font-size:11px}
+  .station-code{font-size:11px}
+  .transport-option{font-size:11px;line-height:1.5}
+  .transport-quick-row{font-size:11px;line-height:1.5}
+  .transport-quick-dot{font-size:9px}
+  .event-meta{font-size:11px}
+  .nav-link,
+  .attraction-intro-btn{font-size:11px;min-height:36px}
+
+  /* Daily summary cards: section labels and detail rows */
+  .day-info-label,
+  .summary-label,
+  .info-label,
+  .meal-label,
+  .stay-label{font-size:11px !important}
+
+  .hotel-details,
+  .hotel-details div,
+  .summary-detail,
+  .info-detail,
+  .day-info-detail{font-size:11px !important;line-height:1.55}
+
+  /* Budget details: date, note, original JPY price and status chips */
+  .budget-item-date,
+  .budget-date{font-size:11px !important}
+
+  .budget-item-note,
+  .budget-meta,
+  .budget-sub,
+  .budget-original,
+  .budget-yen{font-size:11px !important;line-height:1.5}
+
+  .budget-status,
+  .status-chip,
+  .payment-status{font-size:10.5px !important}
+
+  /* Keep important headings/numbers unchanged */
+  .day-card-title,
+  .event-title,
+  .budget-amount,
+  .budget-card .amount,
+  .date-chip{font-size:inherit}
+}
+
+
+/* Readability v2: clearly enlarge real small-text selectors on mobile */
+@media(max-width:640px){
+
+  /* Home preview/status */
+  .now-next-eyebrow{font-size:12px !important}
+  .now-next-sub{font-size:13px !important;line-height:1.5}
+
+  /* Daily summary: 餐食 / 住宿 / 地址 / 電話 / 交通 */
+  .fact{font-size:14px}
+  .fact > b{
+    font-size:13px !important;
+    margin-bottom:5px;
+  }
+  .lodging-name{font-size:17px}
+  .lodging-line{
+    font-size:13px !important;
+    line-height:1.6;
+    margin-top:4px;
+  }
+  .lodging-line span{
+    min-width:46px;
+    font-size:13px;
+  }
+  .reminder-title{font-size:13px !important}
+  .reminder-item-label{font-size:11px !important}
+  .reminder-item-text{font-size:13px !important;line-height:1.65}
+
+  /* Timeline secondary information */
+  .event-meta{font-size:13px !important;line-height:1.5}
+  .nav-link,
+  .attraction-intro-btn{
+    font-size:12.5px !important;
+    min-height:38px;
+    padding:7px 11px;
+  }
+
+  /* Transport cards */
+  .transport-route{
+    font-size:13px !important;
+    line-height:1.45;
+  }
+  .station-code{font-size:12px !important}
+  .transport-option{
+    grid-template-columns:46px minmax(0,1fr) !important;
+    font-size:12.5px !important;
+    line-height:1.55 !important;
+    gap:9px;
+  }
+  .transport-option .label{font-size:12px}
+  .transport-option .value{font-size:12.5px}
+  .transport-quick-row{
+    font-size:12.5px !important;
+    line-height:1.55 !important;
+  }
+  .transport-quick-dot{
+    width:20px;
+    height:20px;
+    font-size:10px !important;
+  }
+
+  /* Attraction / food bottom sheet */
+  .attraction-sheet-kicker{font-size:12px !important}
+  .attraction-section-title{
+    font-size:13px !important;
+    margin-bottom:9px;
+  }
+  .attraction-lead{
+    font-size:14px !important;
+    line-height:1.75 !important;
+  }
+  .attraction-fact b{font-size:11px !important}
+  .attraction-fact span{font-size:13px !important;line-height:1.55}
+  .attraction-must-copy b{font-size:12.5px !important}
+  .attraction-must-copy span{
+    font-size:12px !important;
+    line-height:1.65 !important;
+    margin-top:4px;
+  }
+  .attraction-route,
+  .attraction-tip{
+    font-size:12.5px !important;
+    line-height:1.7 !important;
+  }
+  .attraction-official{font-size:12px !important}
+  .food-rec-badge{font-size:11px !important}
+  .food-rec-meta,
+  .food-rec-price{font-size:11.5px !important}
+  .food-rec-dishes span{font-size:10.5px !important}
+  .food-rec-dishes b{font-size:12px !important}
+  .food-rec-desc{font-size:12.5px !important;line-height:1.65}
+  .food-rec-link{font-size:11.5px !important}
+  .price-current-note{font-size:11.5px !important}
+
+  /* Budget detail cards: these are the actual mobile selectors */
+  .budget-mobile-date{
+    font-size:12px !important;
+    font-weight:800;
+  }
+  .budget-mobile-title{
+    font-size:14px !important;
+    line-height:1.45;
+  }
+  .budget-mobile-meta{
+    font-size:12px !important;
+    line-height:1.55;
+    margin-top:7px;
+  }
+  .budget-mobile-status{
+    font-size:11.5px !important;
+    padding:4px 9px;
+    margin-top:9px;
+  }
+
+  /* Expanded budget filters */
+  .budget-detail-date{font-size:12px !important}
+  .budget-detail-meta{font-size:12px !important;line-height:1.55}
+  .budget-detail-name{font-size:14px !important}
+}
+
+
+/* Readability v3: explicitly enlarge the circled Hero date and 3 tool buttons */
+@media(max-width:640px){
+  .hero-date{
+    font-size:17px !important;
+    line-height:1.35 !important;
+    font-weight:800 !important;
+    letter-spacing:.01em;
+  }
+
+  .hero-tools{
+    gap:6px !important;
+    padding:6px !important;
+  }
+
+  .hero-tools .section-tool-btn{
+    font-size:14px !important;
+    font-weight:800 !important;
+    min-height:44px !important;
+    padding:9px 6px !important;
+    line-height:1.2 !important;
+  }
+}
+
+
+/* FINAL mobile override: timeline time/type pills */
+@media(max-width:640px){
+  .timeline .event-card .event-time-mobile{
+    font-size:15px !important;
+    min-height:34px !important;
+    padding:6px 12px !important;
+    line-height:1 !important;
+    font-weight:850 !important;
+  }
+
+  .timeline .event-card .tag{
+    font-size:13px !important;
+    min-height:30px !important;
+    padding:5px 11px !important;
+    line-height:1.1 !important;
+    font-weight:800 !important;
+    display:inline-flex !important;
+    align-items:center !important;
+  }
+
+  .timeline .event-head{
+    gap:8px !important;
+    margin-bottom:6px !important;
+  }
+}
+
+
+/* FINAL typography audit: normalize remaining tiny mobile labels */
+@media(max-width:640px){
+  .brand-sub{font-size:11px !important;line-height:1.35}
+  .top-countdown{font-size:11px !important}
+  .day-pill small{font-size:11px !important}
+  .now-next-main{font-size:15px !important}
+  .budget-card .small,
+  .budget-filter-card .small{font-size:12px !important;line-height:1.45}
+  .budget-card-head{font-size:12px !important}
+  .food-rec-dishes span{font-size:11px !important}
+  .price-current-note{font-size:11.5px !important}
+}
+
 </style>
 </head>
 <body>
@@ -2370,12 +2645,15 @@ const itinerary=[
  ["15:10","住宿","Centrair Hotel Check-in",""],["15:30","景點","FLIGHT OF DREAMS／Flight Park","至 16:35"],
  ["16:47","名鐵","中部國際空港 → 常滑",""],["17:30","餐食","共榮窯晚餐","待訂位"],["19:27","名鐵","常滑 → 中部機場／回飯店",""]
  ]},
- {date:"01/31",dow:"日",area:"小樽",title:"名古屋 → 新千歲 → 小樽・天狗山",hotel:"Dormy Inn Premium Otaru",meals:"06:00 早餐｜12:00 小樽午餐｜18:30 晚餐",status:"待時刻確認",statusType:"check",tone:"coral",note:"目前 JR：目標快速 Airport 47 號，新千歲 10:20 → 小樽 11:41；若錯過，下一班直達小樽為 10:50 → 12:05。2027 出發前再確認正式時刻；若航班延誤，優先保留天狗山。天狗山遇強風或大雪可能停駛。",items:[
+ {date:"01/31",dow:"日",area:"小樽",title:"名古屋 → 新千歲 → 小樽・天狗山",hotel:"Dormy Inn Premium Otaru",meals:"06:00 早餐｜14:00 三角市場帝王蟹｜晚餐機動",status:"待時刻確認",statusType:"check",tone:"coral",note:"目前以 10:50 新千歲 → 12:05 小樽為目標；14:00 三角市場帝王蟹已預約，15:30 往天狗山。JR 仍須於 2027 出發前再確認；天狗山遇強風或大雪可能停駛。",items:[
  ["06:00","餐食","Centrair Hotel 早餐",""],["06:35","步行","步行至 T1／報到／安檢",""],
- ["07:55","飛機","JL3101 名古屋 → 新千歲","09:40 抵達"],["10:20","JR","新千歲 → 小樽","目標 Airport 47：11:41 抵達｜錯過改 10:50 → 12:05｜2027 再確認"],
- ["12:00","餐食","小樽寄行李／午餐",""],["13:00","步行","堺町／運河周邊",""],
- ["15:30","巴士","小樽站 → 天狗山",""],["16:00","景點","天狗山夕景／夜景",""],
- ["18:30","餐食","小樽晚餐",""],["19:30","步行","小樽運河夜景",""]
+ ["07:55","飛機","JL3101 名古屋 → 新千歲","09:40 抵達"],["10:50","JR","新千歲 → 小樽","目前目標 12:05 抵達｜2027 再確認"],
+ ["12:05後","住宿","小樽抵達／寄放行李","Dormy Inn Premium Otaru"],
+ ["12:30","步行","堺町／運河周邊","14:00 前回小樽站周邊"],
+ ["14:00","餐食","三角市場 帝王蟹饗宴","已預約"],
+ ["15:30","巴士","小樽站 → 天狗山",""],
+ ["16:00","景點","天狗山夕景／夜景","日落約 16:46"],
+ ["18:15","步行","小樽運河夜景",""]
  ]},
  {date:"02/01",dow:"一",area:"小樽／札幌",title:"小樽散步・札幌入住・中島公園",hotel:"札幌公園飯店",meals:"08:00 早餐｜12:30 拉麵｜17:00 成吉思汗",status:"已確認",statusType:"ok",tone:"yellow",note:"",items:[
  ["09:00","步行","小樽運河日景",""],["10:30","住宿","回飯店取行李",""],
@@ -2383,11 +2661,14 @@ const itinerary=[
  ["14:00","住宿","札幌公園飯店入住",""],["15:00","步行","中島公園",""],
  ["17:00","餐食","成吉思汗",""],["19:00","步行","狸小路／薄野",""]
  ]},
- {date:"02/02",dow:"二",area:"支笏湖／洞爺／登別",title:"支笏湖・洞爺湖・登別一日團",hotel:"札幌公園飯店",meals:"07:00 早餐｜12:40 午餐自理｜19:15 晚餐",status:"已確認",statusType:"ok",tone:"blue",note:"08:45 集合、09:00 發車；午餐不含餐，12:40～13:40 需自行用餐。",items:[
- ["08:45","巴士","集合／簽到",""],["09:00","巴士","一日團出發",""],
- ["10:30","景點","支笏湖","至 11:10"],["12:40","餐食","午餐自理","至 13:40｜不含餐"],
- ["13:55","景點","若狹芋本舖 洞爺湖本店",""],["14:30","景點","有珠山纜車","至 15:30"],
- ["16:30","景點","登別地獄谷","至 17:00"],["19:00","巴士","札幌站北口解散",""]
+ {date:"02/02",dow:"二",area:"登別／洞爺湖／支笏湖",title:"支笏湖・洞爺湖・登別一日團",hotel:"札幌公園飯店",meals:"07:00 早餐｜午餐：行程途中自理｜19:15 晚餐",status:"已確認",statusType:"ok",tone:"blue",note:"集合依預訂為 07:50 大通公園 31 號出口；供應商通常於出發前一日通知車號／導遊，仍以當日通知為準。行程順序：登別地獄谷 → 洞爺湖湖畔 → 洞爺湖展望台 → Snow World Toya → 支笏湖冰濤祭；約 18:00 札幌站北口解散。冰濤祭 16:30 後才點燈，本團主要看白天冰景。",items:[
+ ["07:50","巴士","大通公園 31 號出口集合","出發前一日依導遊通知再確認"],
+ ["上午","景點","登別地獄谷","約 40 分"],
+ ["中午","景點","洞爺湖湖畔","約 20 分"],
+ ["中午","景點","洞爺湖展望台","約 20 分"],
+ ["下午","景點","Snow World Toya","約 70 分｜雪地摩托等活動自費"],
+ ["下午","景點","支笏湖冰濤祭","約 60 分｜白天冰景；16:30 後才點燈"],
+ ["18:00","巴士","札幌站北口解散","依路況可能前後變動"]
  ]},
  {date:"02/03",dow:"三",area:"札幌",title:"北海道神宮・赤煉瓦・時計台・電視塔",hotel:"札幌公園飯店",meals:"08:00 早餐｜11:30 午餐｜18:00 和牛＋帝王蟹",status:"已確認",statusType:"ok",tone:"green",note:"",items:[
  ["09:30","景點","北海道神宮＋圓山",""],["11:30","餐食","午餐",""],["13:00","景點","北海道廳舊本廳舍／赤煉瓦",""],
@@ -2860,6 +3141,9 @@ const NAV_TARGETS={
   "中島公園":"中島公園",
   "狸小路／薄野":"狸小路商店街",
   "支笏湖":"支笏湖",
+  "洞爺湖湖畔":"洞爺湖温泉",
+  "洞爺湖展望台":"サイロ展望台",
+  "Snow World Toya":"Snow World Toya",
   "若狹芋本舖 洞爺湖本店":"わかさいも本舗 洞爺湖本店",
   "有珠山纜車":"有珠山ロープウェイ",
   "登別地獄谷":"登別地獄谷",
@@ -3028,6 +3312,7 @@ const TRANSPORT_DETAILS={
   },
   "札幌時計台":{
     line:"赤煉瓦 → 札幌時計台",
+    routeNote:"步行",
     from:"赤煉瓦",
     to:"時計台",
     options:[
@@ -3038,6 +3323,7 @@ const TRANSPORT_DETAILS={
   },
   "札幌電視塔":{
     line:"時計台 → 札幌電視塔",
+    routeNote:"步行",
     from:"時計台",
     to:"TV塔",
     options:[
@@ -3048,6 +3334,7 @@ const TRANSPORT_DETAILS={
   },
   "地下街／狸小路自由活動":{
     line:"電視塔 → 地下街／狸小路",
+    routeNote:"地下步行",
     from:"大通",
     to:"狸小路",
     options:[
@@ -3089,6 +3376,7 @@ const TRANSPORT_DETAILS={
   },
   "伏見 → 藤が丘 → 愛・地球博記念公園":{
     line:"東山線＋Linimo",
+    routeNote:"藤が丘轉乘",
     from:"H09",
     to:"L07",
     options:[
@@ -3099,6 +3387,7 @@ const TRANSPORT_DETAILS={
   },
   "離園 → 名古屋":{
     line:"Linimo＋東山線",
+    routeNote:"藤が丘轉乘",
     from:"L07",
     to:"H09",
     options:[
@@ -3172,9 +3461,9 @@ const TRANSPORT_DETAILS={
     from:"新千歲",
     to:"小樽",
     options:[
-      ["目標","10:20 → 11:41　Airport 47","primary"],
-      ["備案","10:50 → 12:05　特別快速 53",""],
-      ["下一班","11:20 → 12:41　Airport 59",""]
+      ["目標","10:50 → 12:05","primary"],
+      ["下一班","11:20 → 12:41",""],
+      ["確認","2027 出發前再確認正式時刻",""]
     ]
   },
   "小樽站 → 天狗山":{
@@ -3253,15 +3542,29 @@ function renderQuickTransport(name){
 function renderTransportDetail(x){
   const quick=renderQuickTransport(x[2]);
   if(quick)return quick;
-  const info=TRANSPORT_DETAILS[String(x[2]||"").trim()];
+  const key=String(x[2]||"").trim();
+  const info=TRANSPORT_DETAILS[key];
   if(!info)return x[3]?`<div class="event-meta">${x[3]}</div>`:"";
+
+  const labels=info.options.map(o=>o[0]);
+  let routeNote=info.routeNote||"";
+  if(!routeNote){
+    if(info.line.includes("＋") || info.line.includes("+") || labels.includes("轉乘")){
+      routeNote="需轉乘";
+    }else if(labels.every(v=>["步行","位置","入口","地下","續行","抵達","參考","備註"].includes(v))){
+      routeNote="步行";
+    }else{
+      routeNote="直達・免轉乘";
+    }
+  }
+
   return `<div class="transport-detail">
     <div class="transport-route">
       <span>${info.line}</span>
       <span class="station-code">${info.from}</span>
       <span>→</span>
       <span class="station-code">${info.to}</span>
-      <span>直達・免轉乘</span>
+      ${routeNote?`<span>${routeNote}</span>`:""}
     </div>
     <div class="transport-options">
       ${info.options.map(o=>`<div class="transport-option ${o[2]}"><span class="label">${o[0]}</span><span class="value">${o[1]}</span></div>`).join("")}
@@ -3277,7 +3580,7 @@ const ATTRACTION_INFO={
     lead:"名古屋城由德川家康下令興建，是尾張德川家的象徵性居城。這一站真正的重點不是只看外觀，而是進入復原完成的本丸御殿，看書院空間、金碧障壁畫與細緻木作；再搭配金鯱、石垣與城郭配置一起看，會比單純拍天守更有感。",
     stay:"約 1.5～2 小時",
     access:"名城線 名古屋城站 M07，7號出口步行約 5 分",
-    must:["本丸御殿","金鯱與城郭外觀","石垣、櫓與城內散策"],
+    must:["本丸御殿｜依江戶時代文獻、戰前照片與實測圖忠實復原；金碧障壁畫、欄間與飾金具最能看出尾張德川家與將軍宿館的規格。","金鯱｜名古屋城最具代表性的象徵，最初就是用來彰顯尾張德川家的權威；現今天守閉館，金鯱與天守外觀更是辨識名古屋城的核心畫面。","石垣與現存櫓｜本丸仍保有重要文化財櫓、城門與大規模石垣，可補足復原御殿之外真正留存至今的江戶城郭結構。"],
     route:"先進本丸御殿 → 城內主軸散策 → 金鯱／天守外觀 → 有餘裕再往金シャチ横丁。",
     tip:"目前官方開園 09:00～16:30，本丸御殿最晚 16:00 入場。從入口走到本丸御殿還需步行；另官方公告本丸御殿上洛殿部分區域工程預計至 2027/3/19，1/26 前往時部分區域觀感可能與平常不同。",
     url:"https://www.nagoyajo.city.nagoya.jp/tw/information/"
@@ -3288,7 +3591,7 @@ const ATTRACTION_INFO={
     lead:"館舍分北館與南館。北館以鯨類為核心，可從大型主水池與水下觀覽席觀察海豚、虎鯨與白鯨；南館則從日本海、深海一路延伸到熱帶與南極主題，適合完整走一圈。",
     stay:"約 2.5～3 小時",
     access:"名港線 名古屋港站 E07，3號出口步行約 5 分",
-    must:["北館大型主水池","2樓水下觀覽席","南館黑潮大水槽／深海／南極展示"],
+    must:["北館大型主水池｜海豚表演與虎鯨公開訓練等重點活動集中於此，是最需要先確認當日時間表的區域。","水下觀覽席｜從水面下高度看海豚、虎鯨與白鯨，能直接感受體型、游姿與速度，和看台上的表演視角完全不同。","南館黑潮大水槽｜大型魚群與海洋生態展示和北館鯨類形成鮮明對比，能看到『一隻明星動物』以外的海洋尺度。","深海與南極展示｜把日本近海、深海一路延伸到南極環境，讓南館不只是看魚，而是一條完整的海洋主題動線。"],
     route:"入館先看當日活動表 → 先鎖定表演或公開訓練 → 北館主水池＋水下觀覽席 → 再走南館。",
     tip:"館內範圍大，熱門活動可能因動物狀況調整或取消；到場後先看當日節目表最有效率。",
     url:"https://www.nagoyaaqua.jp/traditional-chinese/"
@@ -3299,7 +3602,7 @@ const ATTRACTION_INFO={
     lead:"大須不是單一景點，而是一大片混合型街區。傳統商店、寺院周邊、服飾、二手店、次文化店家、餐飲與小吃混在一起，氣氛比購物中心更雜、更有在地感。",
     stay:"約 1～1.5 小時",
     access:"地下鐵 上前津站 M03／T09",
-    must:["商店街主街散步","街頭小吃","二手、服飾與特色小店"],
+    must:["寺町與門前町背景｜大須從神社佛閣聚集的寺町、大須觀音門前町一路發展成商圈，街區本身有歷史脈絡，不只是購物街。","約1,200家店的『混合感』｜古著、電器、次文化、多國料理與老店混在同一區，這種不統一、什麼都有的氣氛正是大須最有特色的地方。","邊走邊吃最適合｜店家密集、種類分散，與其安排單一必吃店，更適合少量多樣地吃小食、逛小店，時間也最好控制。"],
     route:"從上前津站進商店街 → 沿主街往大須觀音方向逛 → 有興趣再轉進支線；時間到就直接往榮。",
     tip:"這段最適合當彈性時間。若水族館延誤，不必硬逛完整區；各店營業時間也不相同。",
     url:"https://osu.nagoya/zh_TW/"
@@ -3310,7 +3613,7 @@ const ATTRACTION_INFO={
     lead:"這一組適合傍晚到晚上。MIRAI TOWER 可從高處看名古屋市區；旁邊 Oasis 21 的『水的宇宙船』與榮街景連在一起，夜間燈光比白天更有氣氛。",
     stay:"約 1～1.5 小時",
     access:"榮站／久屋大通站；Oasis 21 與榮站直結",
-    must:["MIRAI TOWER 展望台","Oasis 21 水的宇宙船","榮夜景與久屋大通"],
+    must:["MIRAI TOWER 展望台｜從高處沿久屋大通與名古屋市中心看出去，能把白天逛過的城市範圍一次收進視野，夜間尤其有價值。","Oasis 21『水的宇宙船』｜玻璃大屋頂上蓄水形成獨特水景，晚上搭配燈光，是榮地區最有辨識度的現代城市景觀之一。","高空＋地面兩種視角｜兩處距離很近，先從塔上看城市，再到 Oasis 21 看水景與街景，短時間就能得到完全不同的夜景體驗。"],
     route:"先上 MIRAI TOWER 看天色轉暗 → 下塔步行至 Oasis 21 → 榮周邊散步。",
     tip:"營業與夜間活動可能依季節調整，2027/1/26 行前再確認最後入場時間。",
     url:"https://www.nagoya-tv-tower.co.jp/"
@@ -3322,7 +3625,7 @@ const ATTRACTION_INFO={
     lead:"犬山城以現存木造天守聞名，城下臨木曾川，從最上層可俯瞰河川與犬山市街。重點不只外觀，而是實際走進木造天守，感受陡梯、樑柱與古城尺度。",
     stay:"約 60～90 分",
     access:"名鐵犬山站西口步行約 20 分；從城下町一路走上去最順",
-    must:["現存木造天守","最上層迴廊景觀","城山與木曾川視野"],
+    must:["現存木造天守｜犬山城是日本僅存12座現存天守之一，且為國寶；走進原有木構、樑柱與陡梯，比只看外觀更能感受古城尺度。","最上層外廊360度景觀｜犬山城可實際走到天守最上層外廊，俯瞰木曾川、犬山市區與濃尾平原，這是整座城最有記憶點的體驗。","城防結構細節｜武者走道、石落、狹窄樓梯等仍能看到，會理解天守原本是防禦與權威建築，而不只是觀景台。"],
     route:"城下町往北步行 → 城山入口 → 售票處 → 登天守 → 下城後接三光稻荷神社。",
     tip:"官方目前開園 09:00～17:00、16:30 截止入園。天守內階梯很陡，冬季鞋底若濕滑要特別注意。",
     url:"https://inuyamajo.jp/zh-hant/"
@@ -3333,7 +3636,7 @@ const ATTRACTION_INFO={
     lead:"位在犬山城山麓，是歷代犬山城主成瀨家的守護神。境內以連續朱色鳥居、粉紅愛心繪馬與錢洗稻荷最容易辨識，和犬山城可以自然串成同一路線。",
     stay:"約 20～30 分",
     access:"犬山城山麓，從天守下來後可步行銜接",
-    must:["朱色鳥居","愛心繪馬／御神籤","錢洗稻荷"],
+    must:["犬山城主的守護神｜歷代犬山城主成瀨家曾奉其為守護神，位置又在城山腳下，和犬山城一起看才有完整的歷史關係。","連續朱色鳥居｜鳥居集中在較小的境內裡，視覺辨識度很高，也是從犬山城走向城下町時最容易停留拍照的地方。","愛心繪馬與緣結元素｜粉紅愛心繪馬已成為三光稻荷最具代表性的現代參拜特色，和古城的沉穩氣氛形成很有趣的反差。"],
     route:"犬山城下山 → 三光稻荷神社參拜 → 再接犬山城下町午餐與散步。",
     tip:"目前觀光官方資料標示 08:30～16:30；全年仍有少數臨時休業日，2027 行前再確認。",
     url:"https://inuyama.gr.jp/experience/detail/15/"
@@ -3344,7 +3647,7 @@ const ATTRACTION_INFO={
     lead:"犬山城下町至今仍保留江戶時代的町割，沿途可看到町屋、車山藏與新舊店家。這裡比起『指定某一景點』更適合慢慢走、吃午餐與看街景。",
     stay:"約 2～3 小時含午餐",
     access:"名鐵犬山站西口步行約 10 分",
-    must:["本町通街景","歷史町屋／車山藏","在地小吃與午餐"],
+    must:["本町通的城下町格局｜街道仍保有江戶時代城下町的基本町割，從犬山站一路走向犬山城，能感受到『城與商人街』原本就是一體的。","町屋與車山藏｜沿街可看到傳統町屋、祭典車山相關建築，讓街景不只是仿古商店，而是犬山祭文化與生活空間的延續。","小吃與老店混合｜傳統和食、田樂、甜點與新式小店共存，適合把午餐和散步合在一起，不必另繞去別區吃飯。"],
     route:"犬山城／三光稻荷 → 本町通往南慢走 → 找午餐 → 有餘裕再逛支線小店。",
     tip:"商店營業時間各自不同；冬季不用追求全部走完，把主街與午餐保留下來即可。",
     url:"https://inuyama.gr.jp/experience/detail/2/"
@@ -3356,9 +3659,9 @@ const ATTRACTION_INFO={
     lead:"Dondoko 森以《龍貓》的鄉村世界為核心，最重要的是『皋月與梅之家』。這一區和其他區域距離較遠，走進林地後氣氛也最接近作品中的生活場景。",
     stay:"約 60～75 分",
     access:"愛・地球博記念公園站起步較遠；園方標示約 1.0～1.3 km",
-    must:["皋月與梅之家室內","林間步道","Dondoko 堂周邊"],
+    must:["皋月與梅之家｜《龍貓》中草壁一家居住的和洋折衷住宅被完整具象化，廚房、浴室、和室、洋室等生活空間比外觀更值得慢慢看。","走進森林才有作品感｜這一區和其他園區距離較遠，從林間步道進入住宅的過程，本身就把《龍貓》的鄉間生活感帶出來。","Dondoko堂外觀｜山頂木製遊具以作品意象製作；成人不能進入遊具內，所以對你們而言以看外觀、感受山頂氣氛為主，不必特別排隊。"],
     route:"抵園後先走 Dondoko 森 → 皋月與梅之家 → 完成後回到青春之丘方向。",
-    tip:"園方提醒惡劣天候時可能關閉後山散策路；16:00 後也較易壅擠，因此你安排上午是合理的。",
+    tip:"園方提醒惡劣天候時可能關閉後山散策路；15:00 後較容易壅擠，因此你安排上午是合理的。",
     url:"https://ghibli-park.jp/about/"
   },
   "青春之丘＋地球屋":{
@@ -3367,7 +3670,7 @@ const ATTRACTION_INFO={
     lead:"青春之丘以《心之谷》的『地球屋』與圓環廣場為核心，也有《貓的報恩》相關的貓事務所。區域不大，但室內細節多，適合慢慢看道具與空間。",
     stay:"約 45～60 分",
     access:"距愛・地球博記念公園站約 300 m",
-    must:["地球屋","圓環廣場","貓事務所"],
+    must:["地球屋室內｜《心之谷》中最重要的空間之一，2樓有古董家具、機關鐘等，1樓還原聖司學做小提琴的工房，細節密度很高。","圓環廣場｜依電影場景打造，和地球屋一起看才能建立作品中的街區感；這裡也能買明信片並從郵筒寄出。","貓事務所｜《貓的報恩》的建築以『貓的尺寸』製作，可看到巴隆與胖胖等室內小物，尺度本身就是有趣的看點。"],
     route:"Dondoko 森回程 → 青春之丘 → 地球屋 → 再往吉卜力大倉庫。",
     tip:"園方提醒青春之丘 15:00 後較容易壅擠，16:30 結束入場受理；排在上午較穩。",
     url:"https://ghibli-park.jp/about/"
@@ -3378,7 +3681,7 @@ const ATTRACTION_INFO={
     lead:"吉卜力大倉庫是園內最大的室內區域，集展示、場景、兒童遊樂、映像與商店於一體。內容密度最高，也最容易因拍照、排隊與購物超時。",
     stay:"約 2～2.5 小時",
     access:"距愛・地球博記念公園站約 400 m",
-    must:["館內主題展示","作品場景與短片相關內容","冒險飛行團商店"],
+    must:["三大企畫展示｜包含可走進14部作品場景的『名場面展』、宮崎駿監督31件全新全景盒作品，以及製作企劃相關展示，是大倉庫內容最集中的核心。","映像展示室 Orion座｜可看到三鷹之森吉卜力美術館系統的短篇動畫；依目前官方安排，你 2027/1 前往時預計上映園區原創短片《魔女之谷的夜》。","公開倉庫｜保存並展示過去吉卜力美術館與各地展覽使用過的造型與製作物，重點在看作品幕後留下來的實體素材。","冒險飛行團商店｜這是五大園區中規模最大的主商店；若要買園區原創商品，這裡的選擇最完整，但也最容易讓行程超時。"],
     route:"依你的票券時段準時入場 → 先看最想看的展示 → 再補拍照／商店，避免一開始就卡在購物。",
     tip:"大散步券 Premium 的大倉庫有指定入場時間；園方目前也規定 Premium 再入場大倉庫須 15:00 後。你這天 12:00 是目標時段，務必以實際購票結果為準。",
     url:"https://ghibli-park.jp/ticket/"
@@ -3389,7 +3692,7 @@ const ATTRACTION_INFO={
     lead:"這區以《魔法公主》的里山與煉鐵場意象打造，戶外感較強，和大倉庫、魔女之谷的建築型體驗不同，適合當作中段轉換節奏。",
     stay:"約 30～45 分",
     access:"距吉卜力大倉庫約 600 m",
-    must:["里山景觀","作品角色／造景","戶外區域氛圍"],
+    must:["Tatara場｜以《魔法公主》中的建築意象打造，不只拍照，還能理解作品中的『里』與製鐵聚落概念；目前另有五平餅炭火燒體驗。","乙事主與Tatari神｜兩個大型角色造景是這區最直接的作品連結，也比單純看街景更容易辨認《魔法公主》的世界。","里山景觀｜整區刻意用草屋頂、山村與田野感營造日式里山氛圍，重點是整體環境，而不是只找一個建築打卡。"],
     route:"午餐後進區 → 快速抓主要造景 → 若排隊過長就縮短，保留魔女之谷。",
     tip:"園方說明惡劣天候時部分設施可能無法使用；你原行程把這區列為可壓縮，這個優先順序合理。",
     url:"https://ghibli-park.jp/guide/"
@@ -3400,7 +3703,7 @@ const ATTRACTION_INFO={
     lead:"魔女之谷集中《霍爾的移動城堡》《魔女宅急便》等作品元素，是五區中建築與可進入空間最豐富的一區。Premium 票的價值也主要體現在可進入特別建物。",
     stay:"約 1.5～2 小時",
     access:"距吉卜力大倉庫約 400 m",
-    must:["霍爾的城堡","歐其諾宅邸／魔女之家","魔女之谷街景"],
+    must:["霍爾的城堡｜高約20公尺，部分外觀會定時動作並冒煙；Premium 可進入室內，看卡西法爐台、蘇菲房間、霍爾寢室等生活空間。","歐其諾宅邸｜完整呈現《魔女宅急便》琪琪出發修行前的家，藥草工作室、琪琪房間與父親書房都能看到，細節非常生活化。","魔女之家｜《安雅與魔女》的住宅把魔法工作室、安雅房間、圖書室等具體化，風格和前兩棟建築完全不同。","魔女之谷街景｜麵包店、帽子店、鐘樓與歐風街道把多部『魔女』作品串成同一區，建議不要只排特別建物，仍留時間看整體街景。"],
     route:"先進最想看的特別建物 → 再走戶外街景 → 最後視時間補商店或遊具。",
     tip:"園方目前說明 Premium 可進入霍爾的城堡、歐其諾宅邸、魔女之家等；惡劣天候時戶外遊具可能停止。",
     url:"https://ghibli-park.jp/ticket/"
@@ -3412,7 +3715,7 @@ const ATTRACTION_INFO={
     lead:"宮川朝市沿宮川東岸展開，是高山市區最具代表性的晨間散步之一。攤位以在地蔬果、漬物、花卉、民藝與小吃為主，重點是感受高山早晨的生活感，而不是大量採買。",
     stay:"約 30～40 分",
     access:"JR 高山站步行約 10 分",
-    must:["宮川河岸","在地攤商","鍛冶橋一帶街景"],
+    must:["在地攤商｜冬季仍有蔬果、漬物、味噌、餅類與手作商品等，最值得的是看到『高山居民早上會買什麼』，而不是把它當大型觀光市場。","宮川河岸氣氛｜市場沿河展開，攤位和河岸散步結合，和後面的上三之町古街是不同的生活感。","適合小量試吃｜早市重點是短時間品嘗在地小食、看攤販，不需要大量採買；你 10:25 才到高山，更應把時間留給後續古街。"],
     route:"高山站抵達 → 宮川朝市由南往北短走 → 再往古街／中橋。",
     tip:"官方目前 12～3 月營業約 08:00～12:00，且部分攤位售完會提早收；你 10:25 到達仍在營業時段內。",
     url:"https://www.hidatakayama.or.jp/event/detail_1127.html"
@@ -3423,7 +3726,7 @@ const ATTRACTION_INFO={
     lead:"高山古街保存了江戶時代城下町與商人町的格局，出格子町屋、用水與酒造『杉玉』很有辨識度；中橋則以朱紅橋身成為高山市區代表性景觀。",
     stay:"約 40～60 分",
     access:"宮川朝市步行即可串接；高山站到中橋約 15 分",
-    must:["上三之町町屋","造酒屋與杉玉","朱紅中橋"],
+    must:["上三之町町屋｜深色木格柵、窄門面與連續町屋保留高山商人町的特色，這是高山『古街』最核心的視覺。","造酒屋與杉玉｜酒造門前懸掛杉玉是飛驒酒文化很有辨識度的符號；看古街時留意杉玉，比只逛伴手禮店更能讀懂地方特色。","朱紅中橋｜鮮紅橋身與宮川、古街形成強烈對比，是高山市區最具代表性的城市景觀之一，也很適合作為古街散步的收尾。"],
     route:"宮川朝市 → 上三之町 → 中橋 → 再去吃飛驒牛午餐。",
     tip:"古街以步行為主，1 月可能積雪結冰；這天還要趕 13:20 巴士，看到 11:45 左右就應開始往午餐與巴士站收斂。",
     url:"https://www.hidatakayama.or.jp/spot/detail_1101.html"
@@ -3434,7 +3737,7 @@ const ATTRACTION_INFO={
     lead:"這裡是俯瞰白川鄉荻町合掌聚落最經典的角度，可以一次看見聚落屋頂、山谷與冬季雪景，是理解合掌村整體配置最直觀的位置。",
     stay:"約 20～30 分",
     access:"白川鄉巴士總站附近可接展望台接駁；也可依雪況步行",
-    must:["合掌聚落全景","冬季屋頂雪景","山谷構圖"],
+    must:["合掌聚落全景｜從高處一次看清數十棟合掌造在谷地中的分布，這是站在村內街道上看不到的尺度，也是理解世界遺產『聚落』而非單棟房屋的最佳視角。","雪與屋頂關係｜冬季從上方最容易看出陡斜茅草屋頂如何對應豪雪環境；雪覆屋頂與山谷一起出現，才真正能理解合掌造為何長成這個樣子。"],
     route:"抵達白川鄉後先看接駁運行 → 上展望台拍全景 → 下山後再走聚落。",
     tip:"觀光協會有公布展望台接駁資訊，冬季請以當日雪況與運行為準；你只有約 2 小時停留，不建議在展望台久留。",
     url:"https://shirakawa-go.gr.jp/download/"
@@ -3445,7 +3748,7 @@ const ATTRACTION_INFO={
     lead:"白川鄉合掌造聚落以陡斜茅草屋頂適應豪雪環境，傳統建築與居民生活至今並存。真正的看點不是單棟建築，而是整個聚落與雪山、田地之間的關係。",
     stay:"約 45～60 分",
     access:"白川鄉巴士總站步行進入荻町聚落",
-    must:["合掌造屋頂結構","聚落主街與水圳","雪季整體景觀"],
+    must:["合掌造屋頂結構｜陡斜茅草屋頂是為豪雪環境發展出的建築形式，近距離走在村內才看得到屋簷厚度、木構與房屋尺度。","和田家｜世界遺產區內規模最大的合掌造之一，也是國家重要文化財；若現場時間允許進屋，可從室內與樓層看懂合掌造不只是外觀。","仍有人生活的村落｜荻町不是主題樂園，合掌屋、水圳、田地與居民生活仍共存；尊重私有地的同時慢走，反而最能感受這個世界遺產的價值。"],
     route:"展望台下來 → 聚落主街短走 → 選一兩個重點拍攝 → 15:45 前回巴士總站。",
     tip:"這裡是居民生活區，請勿擅闖私有地。冬季路面可能積雪結冰；你有 16:30 長途巴士，務必維持原本 15:45 回站的底線。",
     url:"https://shirakawa-go.gr.jp/"
@@ -3457,7 +3760,7 @@ const ATTRACTION_INFO={
     lead:"Flight Park 最大特色是可以近距離看 Boeing 787 初號機 ZA001。展示區利用實機、面板與影片介紹飛機、機場與航空工作，對成人來說重點在真機尺度與結構。",
     stay:"約 45～60 分",
     access:"中部國際機場 FLIGHT OF DREAMS 1樓",
-    must:["Boeing 787 ZA001 實機","駕駛艙／機體細節","引擎與航空展示"],
+    must:["Boeing 787 初號機 ZA001｜這架是真正參與787開發測試的第一架飛機，退役後飛到中部機場展示；能360度近距離看實機，是這裡不可取代的理由。","駕駛艙參觀｜官方列為最受歡迎的體驗，可看到飛行狀態下的座艙配置；繁忙日可能需要時間指定券，值得抵達後先確認。","實物機械與引擎尺度｜現場有直徑約2.8公尺的實機引擎等展示，對成人來說比兒童遊具更有意思，能真正感受大型客機結構。"],
     route:"飯店 Check-in 後直接進 Flight Park → 先看 787 實機與展示 → 16:35 左右離開準備搭名鐵去常滑。",
     tip:"目前官方營業 10:00～17:00、全年無休；多數區域免費，部分內容另收費。你安排到 16:35 收尾是安全的。",
     url:"https://www.centrair.jp/flight-of-dreams/flight-park.html"
@@ -3469,7 +3772,7 @@ const ATTRACTION_INFO={
     lead:"堺町通是小樽觀光的主街之一，約 1.3 km 範圍內聚集歷史建築、玻璃、音樂盒、甜點與海鮮店；往北不遠就是小樽運河，兩者很適合一起步行。",
     stay:"約 1.5～2 小時",
     access:"JR 小樽站往運河方向步行，再接堺町通",
-    must:["歷史建築街景","玻璃／音樂盒店","運河與淺草橋一帶"],
+    must:["歷史建築再利用｜堺町許多店家直接使用明治、大正時期銀行、商店等歷史建築，逛店的同時其實也在看小樽港町繁榮留下的街景。","小樽玻璃｜玻璃店與工房密度高，是小樽最具代表性的工藝之一；重點不一定是買東西，而是看不同店家的器皿與工藝風格。","音樂盒文化｜小樽音樂盒堂等大型專門店集中在這一帶，歷史建築與大量音樂盒陳列結合，是堺町最有辨識度的體驗之一。"],
     route:"寄放行李／午餐 → 運河 → 淺草橋 → 堺町通 → 再回小樽站搭巴士去天狗山。",
     tip:"冬季路面濕滑，堺町店家又容易讓人停留過久。15:30 要往天狗山，建議把『逛完整條街』改成挑重點店。",
     url:"https://otaru-sakaimachi.com/"
@@ -3480,7 +3783,7 @@ const ATTRACTION_INFO={
     lead:"天狗山從山頂可俯瞰小樽市區、港灣與石狩灣。冬季最值得的是日落前後的變化：白雪城市先進入藍調，再逐步亮起街燈。",
     stay:"約 1.5～2 小時",
     access:"小樽站前搭中央巴士至天狗山纜車站",
-    must:["山頂城市全景","日落／藍調時段","夜景"],
+    must:["山頂全景｜從山上可把小樽市區、港灣與石狩灣一起收入視野，比運河的近景更能理解小樽是一座依山面海的港町。","Magic Hour｜官方特別推薦黃昏到夜晚這段變化；白雪城市從日光、藍調到點燈的過程，比只到山頂拍一張夜景更值得。","纜車上升視角｜從山麓一路升高時，城市與港灣逐漸展開；冬季如果能見度好，上山本身就是景觀的一部分。"],
     route:"15:30 左右從小樽站出發 → 上山先看雪景 → 等 16:46 左右日落 → 夜景亮起後下山。",
     tip:"官方已公布 2026/11/28～2027/3/28 冬季營業，上行至 19:48、下行至 20:00，通常每 12 分鐘一班；強風或惡劣天候可能停駛。",
     url:"https://tenguyama.ckk.chuo-bus.co.jp/ropeway/"
@@ -3491,7 +3794,7 @@ const ATTRACTION_INFO={
     lead:"小樽運河長約 1.14 km，散策路保留煤氣燈與石造倉庫群。夜間點燈後，水面、倉庫與雪景會比白天更有層次，是小樽最適合慢走收尾的地方。",
     stay:"約 30～45 分",
     access:"JR 小樽站步行約 10 分",
-    must:["淺草橋定番視角","煤氣燈散策路","石造倉庫群夜景"],
+    must:["淺草橋經典視角｜官方也將淺草橋列為代表性拍攝點，能把運河彎道、倉庫與散策路一次收入畫面，第一次去最容易拍到『小樽運河感』。","煤氣燈＋石造倉庫照明｜運河散策路有63座煤氣燈，倉庫群日落後也會亮燈；夜景的魅力主要來自暖色燈光和雪地、水面反射。","日落後藍調時段｜天空尚未全黑、煤氣燈剛亮時，藍色天空與暖色燈光反差最好；你從天狗山下山後接運河，時間上正好適合。"],
     route:"晚餐後直接走運河 → 淺草橋拍照 → 沿散策路走一小段即可，不必走完整條。",
     tip:"官方目前煤氣燈為日落後點亮，倉庫群也有夜間照明。冬季河邊風大且路面滑，拍完重點就回飯店。",
     url:"https://otaru.gr.jp/shop/otarucanal"
@@ -3503,7 +3806,7 @@ const ATTRACTION_INFO={
     lead:"白天的運河和夜景是不同風格：能更清楚看到石造倉庫、運河尺度與雪景細節。早上人較少，也適合作為離開小樽前的短散步。",
     stay:"約 30～45 分",
     access:"Dormy Inn Premium Otaru／小樽站周邊步行可達",
-    must:["石造倉庫細節","運河散策路","白天雪景"],
+    must:["石造倉庫細節｜白天最容易看清倉庫外牆、窗戶與再利用後的建築細節，和前一晚偏氣氛的夜景是不同看法。","運河本身的尺度與曲線｜小樽運河全長約1.14公里，因填海方式形成柔和彎曲；白天較容易理解運河與港區的空間關係。","早晨短走即可｜你前一晚已看過夜景，這次重點是補看建築與雪景細節，不需要再走完整條運河。"],
     route:"早餐後散步到運河 → 拍完重點 → 10:30 前回飯店取行李。",
     tip:"你前一晚已看過夜景，早上不用重走很遠；抓一段運河散步即可。",
     url:"https://otaru.gr.jp/shop/otarucanal"
@@ -3514,7 +3817,7 @@ const ATTRACTION_INFO={
     lead:"中島公園就在札幌市中心南側，是約 24 公頃的都市公園。冬季覆雪後會和薄野的繁華感形成很強對比，園內還有重要文化財豐平館與札幌 Concert Hall Kitara。",
     stay:"約 45～60 分",
     access:"南北線 中島公園站下車即達",
-    must:["雪景步道","菖蒲池周邊","豐平館外觀"],
+    must:["都心裡的雪景綠洲｜公園約24公頃、樹木超過5,000棵，離薄野很近卻能迅速進入大片雪景，是札幌『城市與自然貼很近』的典型。","豐平館｜國家重要文化財的西式建築，白色外牆配群青色線條很有辨識度；即使只看外觀，也比單純走雪地多一個歷史層次。","菖蒲池與林間步道｜冬季水景與樹林都轉成白色，適合慢走而不是趕景點；你住札幌公園飯店附近，更適合作為放鬆行程。"],
     route:"飯店入住 → 直接從附近進公園 → 走主要步道 → 視體力往豐平館方向。",
     tip:"冬季步道可能積雪；你住札幌公園飯店就在旁邊，不必一次走完整個公園，後面幾天還可順路補。",
     url:"https://visit.sapporo.travel/tw/discover/nature/nakajima-park/"
@@ -3525,7 +3828,7 @@ const ATTRACTION_INFO={
     lead:"狸小路是札幌歷史悠久的拱廊商店街，1～7丁目約 900 m、店家約 200 間；最大優點是有屋頂，雪天也能舒服逛。再往南就是薄野夜生活區。",
     stay:"約 1～1.5 小時",
     access:"大通／狸小路／薄野站皆可銜接",
-    must:["狸小路拱廊","伴手禮與藥妝／小店","薄野夜間街景"],
+    must:["900公尺全天候拱廊｜狸小路跨7個街區、約200家店，整段有屋頂；冬天最大的價值就是能在不淋雪、少吹風的狀態下逛很久。","不同丁目風格不同｜1丁目偏二手衣與個性店，後段有老店、小酒館與在地店；不用追求全走完，挑你有興趣的丁目反而更有效率。","薄野夜間街景｜從狸小路再往南就是薄野，霓虹、餐廳與夜生活密度高；這一晚重點是感受札幌夜間城市氣氛，不是再追一個大型景點。"],
     route:"晚餐後先狸小路 → 想逛就往 4～7 丁目 → 有體力再去薄野看看夜景。",
     tip:"各店營業時間不同；這晚以散步和熟悉札幌市中心為主，不必把購物一次完成。",
     url:"https://visit.sapporo.travel/tw/discover/city/tanuki-koji-shopping-street/"
@@ -3537,7 +3840,7 @@ const ATTRACTION_INFO={
     lead:"支笏湖是火山活動形成的破火山口湖，冬季湖水與雪山景觀很乾淨。你到訪時正逢 2027 支笏湖冰濤祭期間，白天可看到以湖水結冰形成的『支笏湖藍』冰造景。",
     stay:"依一日團安排約 40 分",
     access:"一日團巴士抵達支笏湖溫泉區",
-    must:["湖畔雪景","支笏湖藍","冰濤祭白天冰景"],
+    must:["支笏湖藍冰雕｜冰濤祭用透明度高的湖水反覆噴灑、凍結製作冰造景；白天最能看出天然偏藍的『支笏湖藍』，這正好符合你上午抵達的時段。","湖泊＋雪山景觀｜冰濤祭之外，支笏湖本身的湖面與周圍山景才是自然背景；先看湖景再進冰雕會更完整。","白天和夜間是不同體驗｜官方夜間16:30才開始點燈，你這次看不到彩色燈光，但白天反而能看清冰體本身的透明度與藍色，不是『少看一半』。"],
     route:"下車先看湖景 → 若團程包含冰濤祭會場則優先進場 → 時間到準時回集合點。",
     tip:"2027 冰濤祭目前公布 1/30～2/23、10:00～20:00；夜間點燈 16:30 後。你 10:30 抵達只能看白天冰景，不會看到夜間點燈。",
     url:"https://www.visit-hokkaido.jp/tw/event/detail_11029.html"
@@ -3548,7 +3851,7 @@ const ATTRACTION_INFO={
     lead:"纜車從昭和新山一帶上到有珠山側，山頂可同時看洞爺湖、昭和新山與火山地形。這一站最有價值的是把湖泊景觀和活火山地貌放在同一個視野裡。",
     stay:"約 60 分",
     access:"一日團巴士抵達山麓站",
-    must:["纜車空中景觀","洞爺湖展望台","有珠火口原方向"],
+    must:["纜車空中視角｜短短約6分鐘就能快速拉高視野，同時看到昭和新山、洞爺湖與周邊火山地形，是一日團時間有限時最有效率的看法。","洞爺湖展望台｜山頂最容易到達的主要觀景點，官方估計纜車加展望台約40分鐘，適合你的一日團停留長度。","有珠火口原展望台｜若團程與冬季步道狀況允許，可再看火山口與地形；官方估計加上這一段約60分鐘，能更清楚理解有珠山是活火山。"],
     route:"上纜車 → 先洞爺湖展望台 → 若時間與步道狀況允許再往火口原展望區 → 準時下山。",
     tip:"官方估算『纜車＋洞爺湖展望台』約 40 分，連火口原展望台約 60 分；冬季實際開放與末班時間會受天候影響。",
     url:"https://usuzan.hokkaido.jp/tw/"
@@ -3559,7 +3862,7 @@ const ATTRACTION_INFO={
     lead:"地獄谷是日和山火山活動形成的爆裂火口跡，直徑約 450 m、面積約 11 公頃。谷內可以直接看到噴氣孔、溫泉湧出口與變色地表，是登別溫泉泉源的重要來源。",
     stay:"約 30 分",
     access:"一日團巴士抵達登別溫泉地區",
-    must:["地獄谷展望景觀","噴氣孔與溫泉湧出","火山地貌"],
+    must:["爆裂火口地形｜地獄谷本身就是日和山火山活動形成、直徑約450公尺的爆裂火口遺跡，不是人工造景，第一眼就能看出地表和一般山谷不同。","噴氣孔與溫泉湧出｜谷內到處可看到蒸氣與溫泉湧出口；每天大量溫泉水從這裡湧出，實際供給登別溫泉街，是景觀和溫泉文化直接連在一起的地方。","地獄谷展望區｜你只有約30分鐘，最有效率的是在主要展望區看火口、蒸氣與變色地表，不必為了『走深一點』犧牲集合時間。"],
     route:"停車區 → 地獄谷入口／展望區 → 沿安全步道看主景 → 回集合點。",
     tip:"官方資料顯示展望台可由服務中心附近進入；冬季步道可能結冰，30 分鐘停留不適合硬走太深。",
     url:"https://noboribetsu-spa.jp/tw/spot/spot0034/"
@@ -3571,7 +3874,7 @@ const ATTRACTION_INFO={
     lead:"北海道神宮供奉開拓三神與明治天皇，是北海道最具代表性的神社之一。神宮位在圓山綠地一帶，冬季參道被雪包圍，和市中心景觀差異很大。",
     stay:"約 1～1.5 小時",
     access:"東西線 圓山公園站 T06，步行約 12～15 分",
-    must:["表參道雪景","本殿參拜","圓山公園林地"],
+    must:["北海道開拓歷史｜神宮最初奉祀北海道開拓三神，後增祀明治天皇；參拜不只是一般神社體驗，也能連到北海道近代開拓史。","雪中的表參道｜神宮坐落在圓山林地旁，冬季長參道被積雪與樹林包圍，從城市地鐵站走進去的景觀轉換很明顯。","本殿參拜｜真正的核心仍是到本殿完成參拜；若時間有限，優先保留表參道與本殿，不需要把圓山公園全部走完。"],
     route:"圓山公園站 → 圓山公園 → 北海道神宮 → 參拜後原路回站。",
     tip:"冬季參道積雪結冰很常見，鞋底防滑比趕速度重要。神宮參拜區與圓山公園可連走，不必另搭車。",
     url:"https://www.hokkaidojingu.or.jp/"
@@ -3582,7 +3885,7 @@ const ATTRACTION_INFO={
     lead:"1888 年建成的赤煉瓦廳舍是札幌代表性的明治期磚造洋風建築，2025 年完成大規模改修後重新開放。現在除了建築本身，也有北海道歷史、文化與地方資訊展示。",
     stay:"約 45～60 分",
     access:"札幌站步行約 8 分；大通站步行約 9 分",
-    must:["紅磚外觀與八角塔","玄關／室內歷史空間","北海道歷史與文化展示"],
+    must:["1888年紅磚建築｜紅磚外牆、對稱立面與八角塔是札幌最具代表性的明治期洋風官廳建築，看外觀就能理解它為何成為城市地標。","北海道歷史與愛努文化展示｜2025年大修後重新開放，室內不再只是『老建築』，而是用數位與實體展示介紹北海道歷史、文化與愛努內容。","179市町村資訊展示｜館內把北海道各地的地方資訊集中呈現，對已經跑過名古屋、小樽、札幌的你們來說，也很適合作為理解北海道整體的補充。"],
     route:"先拍前庭正面 → 進館看主要展示 → 出館後步行往時計台。",
     tip:"目前官方開館 08:45～21:00、20:30 最終入館，入館需購票；你 13:00 抵達時間很充裕。",
     url:"https://www.hokkaido-redbrick.jp/tw/"
@@ -3593,7 +3896,7 @@ const ATTRACTION_INFO={
     lead:"時計台原是札幌農學校演武場，現在是國指定重要文化財。外觀看似小巧，但館內能理解建築用途、札幌農學校歷史與機械鐘本身，比只在外面拍照完整很多。",
     stay:"約 30～40 分",
     access:"大通站市役所側出口步行約 5 分",
-    must:["白色木造外觀","2樓演武場空間","鐘樓與歷史展示"],
+    must:["原札幌農學校演武場｜它最初不是為觀光而建，而是札幌農學校的演武場；知道原用途後，2樓的大空間會比只拍白色外觀更有意思。","機械式塔鐘｜時鐘靠重錘與鐘擺持續運作，每逢整點敲鐘；館內還有同型機械展示，可看懂這座塔鐘如何維持百年以上運轉。","2樓演武場與展示｜2樓保留開闊的演武場空間並展示時計機械與近代建築資料，進館約30分鐘就能比外拍多理解很多。"],
     route:"赤煉瓦步行過來 → 先拍外觀 → 進館快速看一二樓 → 再走去電視塔。",
     tip:"目前官方 08:45～17:10，17:00 截止入館；冬季館內有暖氣但官方提醒仍可能偏冷。",
     url:"https://sapporoshi-tokeidai.jp/"
@@ -3604,7 +3907,7 @@ const ATTRACTION_INFO={
     lead:"札幌電視塔位在大通公園東端，展望台約 90 m 高，最直觀的看點是沿大通公園向西延伸的城市軸線。冬季下午上塔，也能看到雪覆公園和市中心。",
     stay:"約 45～60 分",
     access:"大通站 27 號出口即達",
-    must:["90 m 展望台","大通公園軸線","札幌中心市景"],
+    must:["90.38公尺展望台｜從塔上可正對大通公園長軸，往遠處還能看到札幌市區、石狩平原等；這個『沿大通向西看』的視角是其他展望台很難取代的。","冬季大通公園俯瞰｜2月初從高處看雪覆大通，比在地面走更容易理解札幌棋盤式街區與公園的位置關係。","怖窗｜展望台南東側有從腳邊延伸到天花板、略向外傾斜的大玻璃，除了看景，也是一個很有記憶點的小體驗。"],
     route:"時計台步行約 5 分 → 上展望台 → 下塔後直接接地下街／狸小路。",
     tip:"目前官方展望台 09:00～22:00、21:50 最終入場；活動日可能調整。展望台沒有洗手間，建議上樓前先處理。",
     url:"https://www.tv-tower.co.jp/pricetime.html"
@@ -3615,7 +3918,7 @@ const ATTRACTION_INFO={
     lead:"大通到狸小路可利用 Aurora Town、Pole Town 等地下空間銜接，冬天最大的優勢是能避雪避風；到了狸小路後再選擇上地面逛有屋頂的商店街。",
     stay:"約 1.5～2 小時",
     access:"札幌電視塔可直接往大通地下街方向銜接",
-    must:["Aurora Town","Pole Town","狸小路 1～7 丁目"],
+    must:["Aurora Town｜位在大通公園下方、接近電視塔一側，最實用的價值是看完電視塔後可以直接進地下空間避雪避風。","Pole Town｜由大通往南延伸至薄野方向，可一路接近狸小路再上地面，冬天能大幅減少在路口等紅綠燈與吹風的時間。","把地下街當交通工具｜這一段不必當成『必逛景點』；重點是利用地下動線舒服地移動，再把體力留給狸小路與晚餐。"],
     route:"電視塔 → Aurora Town → Pole Town 往南 → 狸小路交會處上地面 → 依晚餐位置收尾。",
     tip:"狸小路約 900 m、約 200 店，不需要全走；18:00 有晚餐，建議預留回餐廳與雪地步行時間。",
     url:"https://visit.sapporo.travel/tw/discover/city/tanuki-koji-shopping-street/"
@@ -3848,6 +4151,39 @@ const ATTRACTION_INFO={
       ["蟹優先","北の大地 かに源 別邸","帝王蟹／松葉蟹吃到飽","如果最後決定把蟹當主角，可改選蟹專門吃到飽型。","蟹吃到飽約 ¥7,678～16,478／人"],
       ["品質取向","氷雪の門","老字號蟹料理｜非吃到飽","如果不追求吃到飽，想完整吃帝王蟹料理，可考慮品質型方案。","帝王蟹套餐約 ¥14,580 起／人"]
     ],
+    url:""
+  },
+  "洞爺湖湖畔":{
+    kicker:"02/02・洞爺湖",
+    title:"洞爺湖湖畔",
+    lead:"洞爺湖是大型火山口湖，湖中央的中島與周圍火山地形讓景觀很有辨識度。一日團在湖畔停留時間不長，這一站的價值不是『逛很多』，而是近距離看湖面、雪山與溫泉街形成的冬季景色。",
+    stay:"約 20 分鐘",
+    access:"一日團巴士抵達洞爺湖溫泉／湖畔區",
+    must:["湖面與中島｜從湖畔平視最容易感受湖泊尺度，中島讓整個洞爺湖景觀有明確中心。","火山地形背景｜洞爺湖本身就是火山活動形成的湖泊，周圍有珠山、昭和新山讓『湖＋火山』成為這區真正特色。"],
+    route:"下車先直奔湖畔 → 看湖景與中島 → 簡單拍照後準時回集合點；20 分鐘不適合繞遠。",
+    tip:"冬季湖邊風大、體感溫度低；這站時間短，保暖與準時回車比多走景點重要。",
+    url:"https://www.laketoya.com/"
+  },
+  "洞爺湖展望台":{
+    kicker:"02/02・洞爺湖",
+    title:"洞爺湖展望台（Silo Observatory）",
+    lead:"Silo Observatory 位在洞爺湖西岸高地，和湖畔的平視角度不同，可以一次看到洞爺湖、中島、有珠山與昭和新山，是理解洞爺湖整體地形最有效率的位置。",
+    stay:"約 20 分鐘",
+    access:"一日團巴士直達展望台停車區",
+    must:["洞爺湖全景｜從高處一次看完整湖面與中島，能把剛才湖畔看到的近景轉成『整個火山湖』的尺度。","有珠山／昭和新山同框｜天氣好時火山群會和湖面一起進入視野，這正是 Silo Observatory 最不可取代的角度。"],
+    route:"下車 → 直接展望平台 → 先看主全景 → 有時間再進賣店／洗手間 → 回車。",
+    tip:"展望台本身免費；冬期商店目前約 08:30～17:00。冬季視線受風雪影響很大，能見度差時不要為拍照拖延。",
+    url:"https://toyako.biz/"
+  },
+  "Snow World Toya":{
+    kicker:"02/02・洞爺湖",
+    title:"Snow World Toya",
+    lead:"這一站的定位是冬季雪地活動，而不是傳統觀光景點。行程通常保留較長時間，可依現場選擇雪地摩托等自費活動；不參加付費項目也能休息或玩雪。",
+    stay:"約 70 分鐘",
+    access:"一日團巴士直達",
+    must:["雪地摩托體驗｜如果想把這天從『看景』變成真正的雪地活動，這是最有差異化的項目；價格與方案依供應商當日公告。","不參加也能保留體力｜這段本來就比其他景點停留久，不騎雪地摩托時可把它當作休息、玩雪與補給時間，不必勉強花費。"],
+    route:"抵達先聽導遊說明 → 想參加自費活動就立即登記 → 不參加則以休息／玩雪為主 → 集合前 10 分鐘回車。",
+    tip:"目前團體行程常見雪地摩托為自費項目，價格與開放會受積雪、天候及現場方案影響；不要把它視為已包含費用。",
     url:""
   }
 };
@@ -4191,9 +4527,14 @@ document.addEventListener("DOMContentLoaded",()=>{
       </div>
 
       <div class="attraction-section">
-        <div class="attraction-section-title">${(x.kind==="food"||x.kind==="recommend") ? "特色重點" : "必看 3 點"}</div>
+        <div class="attraction-section-title">${(x.kind==="food"||x.kind==="recommend") ? "特色重點" : "必看重點"}</div>
         <div class="attraction-must">
-          ${(x.must||[]).map((item,i)=>`<div class="attraction-must-item"><span class="attraction-must-num">${i+1}</span><span>${escSheet(item)}</span></div>`).join("")}
+          ${(x.must||[]).map((item,i)=>{
+            const parts=String(item).split("｜");
+            const head=parts.shift()||"";
+            const detail=parts.join("｜");
+            return `<div class="attraction-must-item"><span class="attraction-must-num">${i+1}</span><span class="attraction-must-copy"><b>${escSheet(head)}</b>${detail?`<span>${escSheet(detail)}</span>`:""}</span></div>`;
+          }).join("")}
         </div>
       </div>
 
