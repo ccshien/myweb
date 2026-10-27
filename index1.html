@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fffaf3">
 <title>名古屋・北海道｜2027 冬旅</title>
-<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_000000009d608206ba2dfbc7ccd20bd8%26fn%3Dindex1_desktop_fixed_v3.html%26cd%3Dattachment%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3D95068e73edb9a7674baffd494e1089530002ab6adb3e0cefb9fc23300cde6aeb%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000e19482068718de117d2a9611%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3Db05100eda0fc72963bca4607dcea39b138acce60fe22383649e50006bfa89d80%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
 <style>
 :root{
  --paper:#fffaf3;--paper2:#fff6ea;--ink:#35312f;--muted:#817873;
@@ -3358,6 +3358,17 @@ body.attraction-sheet-open{overflow:hidden}
   color:#075fae !important;
 }
 
+
+/* ===== Desktop attraction-sheet close-button fix ===== */
+.attraction-sheet-close{
+  position:relative;
+  z-index:5;
+  cursor:pointer;
+  pointer-events:auto !important;
+  touch-action:manipulation;
+  user-select:none;
+}
+
 </style>
 </head>
 <body>
@@ -6131,7 +6142,15 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(btn){openAttractionSheet(btn.dataset.attraction);return;}
   if(e.target===backdrop)closeAttractionSheet();
  });
- closeBtn.addEventListener("click",closeAttractionSheet);
+ closeBtn.addEventListener("pointerdown",e=>{
+  // Do not let the parent sheet enter drag/pointer-capture mode.
+  e.stopPropagation();
+ });
+ closeBtn.addEventListener("click",e=>{
+  e.preventDefault();
+  e.stopPropagation();
+  closeAttractionSheet();
+ });
 
  const sheet=backdrop.querySelector(".attraction-sheet");
  const handle=backdrop.querySelector(".attraction-sheet-handle");
@@ -6142,6 +6161,11 @@ document.addEventListener("DOMContentLoaded",()=>{
 
  function canStartSheetDrag(target){
   if(!sheet || !body)return false;
+
+  // Buttons/links/inputs must keep their normal desktop click behavior.
+  // Otherwise the sheet's pointer capture can swallow the close-button click.
+  if(target?.closest?.("button,a,input,select,textarea,[role='button']"))return false;
+
   if(handle && (target===handle || handle.contains(target)))return true;
   return body.scrollTop<=0;
  }
