@@ -3672,6 +3672,111 @@ body.attraction-sheet-open{overflow:hidden}
   .field-guide-note{padding:11px 13px !important;border-radius:14px !important;font-size:14.5px !important;line-height:1.65 !important}
 }
 
+
+
+/* ===== 01/31–02/01 Love Letter themed hero ===== */
+.hero-visual.love-letter-day #mainHeroImage{
+ object-position:center center;
+ filter:none !important;
+}
+@media(max-width:640px){
+ .hero-visual.love-letter-day{
+  border-radius:24px;
+  overflow:hidden;
+ }
+ .hero-visual.love-letter-day #mainHeroImage{
+  object-position:center center;
+ }
+}
+
+
+/* ===== 02/01 cinematic text overlay ===== */
+.feb01-hero-copy{
+ position:absolute;
+ z-index:6;
+ left:5.2%;
+ right:auto;
+ top:16%;
+ width:min(40%,460px);
+ color:#f8fbff;
+ text-align:left;
+ text-shadow:0 2px 12px rgba(10,27,47,.62),0 1px 2px rgba(0,0,0,.55);
+ pointer-events:none;
+}
+.feb01-hero-copy[hidden]{display:none!important}
+.feb01-hero-date{
+ display:inline-block;
+ margin-bottom:8px;
+ font-size:13px;
+ font-weight:900;
+ letter-spacing:.16em;
+ color:rgba(255,255,255,.80);
+}
+.feb01-hero-title{
+ font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
+ font-size:clamp(26px,3.1vw,46px);
+ line-height:1.18;
+ font-weight:700;
+ letter-spacing:.035em;
+}
+.feb01-hero-title span{
+ color:#f3aab0;
+ margin-left:.16em;
+}
+.feb01-hero-sub{
+ margin-top:10px;
+ font-size:clamp(12px,1.25vw,17px);
+ font-weight:650;
+ letter-spacing:.12em;
+ color:rgba(255,255,255,.90);
+}
+.hero-visual.feb01-day #mainHeroImage{
+ filter:brightness(.82) saturate(.92) contrast(1.04)!important;
+}
+@media(max-width:640px){
+ .feb01-hero-copy{
+  left:6%;
+  right:auto;
+  top:12%;
+  width:42%;
+ }
+ .feb01-hero-date{
+  font-size:10px;
+  margin-bottom:4px;
+ }
+ .feb01-hero-title{
+  font-size:clamp(20px,6vw,27px);
+  line-height:1.12;
+ }
+ .feb01-hero-title span{
+  display:block;
+  margin-left:0;
+  margin-top:2px;
+ }
+ .feb01-hero-sub{
+  margin-top:6px;
+  font-size:10.5px;
+  line-height:1.45;
+  letter-spacing:.06em;
+ }
+}
+
+
+/* ===== 02/02–02/06 北海道專屬 Hero ===== */
+.hero-visual.hokkaido-only-day #mainHeroImage{
+ object-position:center center !important;
+ filter:none !important;
+}
+@media(max-width:640px){
+ .hero-visual.hokkaido-only-day{
+  border-radius:24px;
+  overflow:hidden;
+ }
+ .hero-visual.hokkaido-only-day #mainHeroImage{
+  object-position:center center !important;
+ }
+}
+
 </style>
 </head>
 <body>
@@ -3693,8 +3798,13 @@ body.attraction-sheet-open{overflow:hidden}
 
 <section id="home" class="page active">
  <div class="hero">
-  <div class="hero-visual hero-photo">
-   <img src="assets/images/hero-main.jpg" alt="名古屋與北海道冬季旅行主視覺">
+  <div class="hero-visual hero-photo" id="mainHeroVisual">
+   <img id="mainHeroImage" src="assets/images/hero-main.jpg" alt="名古屋與北海道冬季旅行主視覺">
+   <div class="feb01-hero-copy" id="feb01HeroCopy" hidden>
+    <div class="feb01-hero-date">02/01</div>
+    <div class="feb01-hero-title">小樽・札幌<span>《情書》</span></div>
+    <div class="feb01-hero-sub">從雪中的小樽，前往札幌</div>
+   </div>
    
   </div>
   <div class="hero-copy">
@@ -3805,6 +3915,9 @@ body.attraction-sheet-open{overflow:hidden}
 </section>
 
 
+
+
+
 <section id="budget" class="page">
  <div class="subpage-topbar">
   <button class="back-home-btn" type="button" data-back-home>‹ 首頁</button>
@@ -3887,12 +4000,13 @@ body.attraction-sheet-open{overflow:hidden}
 
 </section>
 
+
 </div>
 
 <script>
 const flights=[{"date":"01/25 去程","no":"IT206","from":"桃園 T1","to":"名古屋中部 T2","dep":"08:45","arr":"12:25","note":"虎航｜已付款"},{"date":"01/31 國內線","no":"JL3101","from":"名古屋中部","to":"新千歲","dep":"07:55","arr":"09:40","note":"日本航空｜已付款"},{"date":"01/31 北海道去程","no":"CI2130","from":"桃園","to":"新千歲","dep":"05:00","arr":"09:40","note":"華航"},{"date":"02/04 返台","no":"BR165","from":"新千歲","to":"桃園 T2","dep":"12:10","arr":"16:05","note":"長榮航空｜已付款"},{"date":"02/06 回程","no":"CI2131","from":"新千歲","to":"桃園","dep":"10:40","arr":"14:15","note":"華航"}];
 
-const dayPhotos={"01/25":"assets/images/day-0125.jpg","01/26":"assets/images/day-0126.jpg","01/27":"assets/images/day-0127.jpg","01/28":"assets/images/day-0128.jpg","01/29":"assets/images/day-0129.jpg","01/30":"assets/images/day-0130.jpg","01/31":"assets/images/day-0131.jpg","02/01":"assets/images/day-0201.jpg","02/02":"assets/images/day-0202.jpg","02/03":"assets/images/day-0203.jpg","02/04":"assets/images/day-0204.jpg"};
+const dayPhotos={"01/25":"assets/images/day-0125.jpg","01/26":"assets/images/day-0126.jpg","01/27":"assets/images/day-0127.jpg","01/28":"assets/images/day-0128.jpg","01/29":"assets/images/day-0129.jpg","01/30":"assets/images/day-0130.jpg","01/31":"assets/images/day-0131.jpg","02/01":"assets/images/day-0201-love-letter.jpg","02/02":"assets/images/day-0202.jpg","02/03":"assets/images/day-0203.jpg","02/04":"assets/images/day-0204.jpg"};
 
 // Group-trip v3 photo overrides: use real travel photography instead of illustrated placeholders.
 dayPhotos["02/02"]="https://rimage.gnst.jp/livejapan.com/public/img/spot/lj/00/07/lj0007707/lj0007707_5b16115f5d7e8_main.jpg?20251218151742=&q=80";
@@ -3940,7 +4054,7 @@ const itinerary=[
  ["15:10","住宿","Centrair Hotel Check-in",""],["15:30","景點","FLIGHT OF DREAMS／Flight Park","至 16:35"],
  ["16:47","名鐵","中部國際空港 → 常滑",""],["17:30","餐食","共榮窯晚餐","待訂位"],["19:27","名鐵","常滑 → 中部機場／回飯店",""]
  ]},
-{"date":"01/31","dow":"日","area":"新千歲／小樽","title":"抵達北海道・小樽會合・天狗山","hotel":"Dormy Inn Premium Otaru","meals":"14:00 三角市場帝王蟹與海鮮饗宴｜晚餐機動｜21:30～23:00 夜鳴きそば","status":"已規劃","statusType":"ok","tone":"coral","note":"","items":[["05:00","飛機","桃園 → 新千歲","CI2130｜09:40 抵達"],["07:55","飛機","名古屋 → 新千歲","JL3101｜09:40 抵達"],["10:15","集合","新千歲機場集合／前往 JR",""],["10:50","JR","新千歲 → 小樽","12:05 抵達"],["14:00","餐食","三角市場帝王蟹與海鮮饗宴",""],["15:30","巴士","小樽站 → 天狗山",""],["16:00","景點","天狗山夕景／夜景","日落約 16:46"],["18:15","景點","小樽運河夜景",""],["21:30～23:00","餐食","飯店夜鳴きそば",""]]},
+{"date":"01/31","dow":"日","area":"新千歲／小樽","title":"北海道・相遇小樽《情書》","hotel":"Dormy Inn Premium Otaru","meals":"14:00 三角市場帝王蟹與海鮮饗宴｜晚餐機動｜21:30～23:00 夜鳴きそば","status":"已規劃","statusType":"ok","tone":"coral","note":"","items":[["05:00","飛機","桃園 → 新千歲","CI2130｜09:40 抵達"],["07:55","飛機","名古屋 → 新千歲","JL3101｜09:40 抵達"],["10:15","集合","新千歲機場集合／前往 JR",""],["10:50","JR","新千歲 → 小樽","12:05 抵達"],["14:00","餐食","三角市場帝王蟹與海鮮饗宴",""],["15:30","巴士","小樽站 → 天狗山",""],["16:00","景點","天狗山夕景／夜景","日落約 16:46"],["18:15","景點","小樽運河夜景",""],["21:30～23:00","餐食","飯店夜鳴きそば",""]]},
 {"date":"02/01","dow":"一","area":"小樽／札幌","title":"上午自由選擇・小樽→札幌・中島公園","hotel":"札幌公園飯店","meals":"08:00 早餐／10:00 三角市場早餐（二選一）｜13:30 札幌拉麵｜17:00 成吉思汗","status":"已規劃","statusType":"ok","tone":"yellow","note":"","items":[["08:00","自由","方案 A｜早餐＋小樽運河日景","09:00 前往運河｜約 10:15 返回飯店"],["10:00","自由","方案 B｜自然醒＋三角市場早餐","早餐後約 10:50 返回飯店"],["11:10","住宿","Dormy Inn 大廳集合／取行李",""],["11:20","步行","前往小樽站",""],["11:53","JR","小樽 → 札幌","Airport 82｜12:27 抵達"],["13:00","住宿","札幌公園飯店寄放行李","15:00 起可 Check-in"],["13:30","餐食","拉麵午餐",""],["14:30","景點","中島公園",""],["15:30","住宿","札幌公園飯店 Check-in／休息",""],["17:00","餐食","成吉思汗晚餐",""],["19:00","步行","狸小路／薄野",""],["21:00～22:00","住宿","依體力回飯店休息",""]]},
 {"date":"02/02","dow":"二","area":"札幌／洞爺湖／登別／支笏湖","title":"分組活動日・滑雪／冬季一日遊","hotel":"札幌公園飯店","meals":"旅遊組 07:00 早餐｜滑雪組依行程｜19:00 湯咖哩","status":"分組活動","statusType":"ok","tone":"blue","note":"","items":[["06:30","滑雪","滑雪組早餐／出發準備",""],["07:00","餐食","旅遊組飯店早餐",""],["07:30","滑雪","滑雪組前往滑雪場",""],["08:30","巴士","旅遊組札幌電視塔 1F 集合","08:40 發車"],["09:50","景點","中山峠",""],["10:55","景點","洞爺湖展望台",""],["11:40","餐食","洞爺湖溫泉街／自由午餐",""],["13:00","景點","昭和新山・熊牧場","約 40 分鐘"],["14:25","景點","登別地獄谷",""],["16:10","景點","支笏湖冰濤祭","16:30 起點燈"],["18:20","巴士","札幌電視塔前解散",""],["19:00","餐食","湯咖哩餐廳集合／晚餐",""]]},
 {"date":"02/03","dow":"三","area":"札幌","title":"分組活動日・滑雪／札幌市區","hotel":"札幌公園飯店","meals":"滑雪組 06:30 早餐｜旅遊組 08:00 早餐｜18:00 和牛＋帝王蟹","status":"分組活動","statusType":"ok","tone":"green","note":"","items":[["06:30","滑雪","滑雪組早餐／出發準備",""],["07:30","滑雪","滑雪組前往滑雪場",""],["08:00","餐食","旅遊組飯店早餐",""],["09:30","景點","北海道神宮＋圓山",""],["11:30","餐食","午餐",""],["13:00","景點","北海道廳舊本廳舍／赤煉瓦",""],["14:15","景點","札幌時計台",""],["15:00","景點","札幌電視塔",""],["16:00","步行","地下街／狸小路自由活動",""],["18:00","餐食","和牛＋帝王蟹餐廳集合／晚餐",""]]},
@@ -6125,10 +6239,53 @@ function renderDay(d,idx,preview=false){
  if(splitGroups[d.date]) return renderDayHeader(d)+flightHtml+renderSplitRoutes(d);
  return renderDayHeader(d)+flightHtml+renderMap(d,idx)+renderTimeline(d);
 }
+
+
+
+
+const LOVE_LETTER_HERO_0131="assets/images/hero-0131-love-letter.png";
+const LOVE_LETTER_HERO_0201="assets/images/day-0201-love-letter.jpg";
+const HOKKAIDO_HERO_0202_PLUS="assets/images/hero-hokkaido-0202-plus.png";
+const MAIN_HERO_IMG=document.getElementById("mainHeroImage");
+const MAIN_HERO_VISUAL=document.getElementById("mainHeroVisual");
+const DEFAULT_HERO_SRC=MAIN_HERO_IMG ? MAIN_HERO_IMG.getAttribute("src") : "";
+
+const FEB01_HERO_COPY=document.getElementById("feb01HeroCopy");
+
+function updateMainHeroForDay(d){
+ if(!MAIN_HERO_IMG || !d) return;
+ let src=DEFAULT_HERO_SRC;
+ let alt="名古屋與北海道冬季旅行主視覺";
+
+ if(d.date==="01/31"){
+   src=LOVE_LETTER_HERO_0131;
+   alt="北海道・相遇小樽《情書》";
+ }else if(d.date==="02/01"){
+   src=LOVE_LETTER_HERO_0201;
+   alt="小樽・札幌《情書》主題視覺";
+ }else if(["02/02","02/03","02/04","02/05","02/06"].includes(d.date)){
+   src=HOKKAIDO_HERO_0202_PLUS;
+   alt="北海道冬季雪景主視覺";
+ }
+
+ MAIN_HERO_IMG.src=src;
+ MAIN_HERO_IMG.alt=alt;
+
+ const loveLetterDay=d.date==="01/31"||d.date==="02/01";
+ const hokkaidoOnlyDay=["02/02","02/03","02/04","02/05","02/06"].includes(d.date);
+
+ MAIN_HERO_VISUAL?.classList.toggle("love-letter-day",loveLetterDay);
+ MAIN_HERO_VISUAL?.classList.toggle("feb01-day",d.date==="02/01");
+ MAIN_HERO_VISUAL?.classList.toggle("hokkaido-only-day",hokkaidoOnlyDay);
+
+ if(FEB01_HERO_COPY) FEB01_HERO_COPY.hidden=d.date!=="02/01";
+}
+
 function renderSelectors(){
  const btns=itinerary.map((d,i)=>`<button class="day-pill ${i===current?"active":""}" data-i="${i}">${d.date}<small>週${d.dow}</small></button>`).join("");
  document.getElementById("homeDays").innerHTML=btns;
  document.getElementById("homeDayCard").innerHTML=renderDay(itinerary[current],current,false);
+ updateMainHeroForDay(itinerary[current]);
  initSplitTabs();
  initRouteMapPlayers();
  renderNowNext();
@@ -6349,7 +6506,6 @@ document.addEventListener("touchend",e=>{
  edgeSwipe=null;
  if(dx>85 && Math.abs(dy)<65) goHomeFromBrand();
 },{passive:true});
-
 
 function initBudgetAccordion(){
  const cards=[...document.querySelectorAll(".budget-filter-card")];
