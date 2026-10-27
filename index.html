@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fffaf3">
 <title>名古屋・北海道｜2027 冬旅</title>
-<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_0000000036988206abdc76f8f769a416%26fn%3Dindex1_desktop_fixed_v5.html%26cd%3Dattachment%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3Df4abdc1363c55a355675123d4e9fbe5a26de80d549ac124db9aee2992811077d%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000c60882069af252c225b6e363%26fn%3Dindex_desktop_fixed_v6.html%26cd%3Dattachment%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3D22e32b6da09984534376d95a77172d5601530df5f351b508cd1c4d0651337f6e%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
 <style>
 :root{
  --paper:#fffaf3;--paper2:#fff6ea;--ink:#35312f;--muted:#817873;
@@ -3397,11 +3397,10 @@ body.attraction-sheet-open{overflow:hidden}
   <div class="hero-copy">
    <div class="hero-date hero-date-single">2027・01/25 ～ 02/04 ｜ 01/31 ～ 02/06</div>
    
-   <div class="hero-tools has-four">
+   <div class="hero-tools">
     <button class="section-tool-btn" type="button" data-target="flights">✈️ 航班</button>
     <button class="section-tool-btn" type="button" data-target="prep">✓ 準備</button>
     <button class="section-tool-btn" type="button" data-target="taxrefund">¥ 退稅</button>
-    <button class="section-tool-btn" type="button" data-target="budget">💰 預算</button>
    </div>
 
   </div>
@@ -3502,87 +3501,7 @@ body.attraction-sheet-open{overflow:hidden}
 </section>
 
 
-<section id="budget" class="page">
- <div class="subpage-topbar">
-  <button class="back-home-btn" type="button" data-back-home>‹ 首頁</button>
- </div>
- <div class="section-title"><div class="round-icon" style="background:var(--lav)">💰</div>預算細項</div>
 
- <div class="budget-grid budget-summary-grid">
-  <button class="budget-card paid budget-filter-card" type="button" data-budget-filter="已付款" aria-expanded="false">
-   <div class="budget-card-head"><span class="small">已付款</span><span class="budget-chevron">⌄</span></div>
-   <div class="val">NT$98,326</div><div class="small">3 段機票</div>
-  </button>
-  <button class="budget-card pending budget-filter-card" type="button" data-budget-filter="待扣款" aria-expanded="false">
-   <div class="budget-card-head"><span class="small">待扣款</span><span class="budget-chevron">⌄</span></div>
-   <div class="val">NT$34,968</div><div class="small">名古屋＋Centrair 已知住宿</div>
-  </button>
-  <button class="budget-card unpaid budget-filter-card" type="button" data-budget-filter="未付款" aria-expanded="false">
-   <div class="budget-card-head"><span class="small">未付款</span><span class="budget-chevron">⌄</span></div>
-   <div class="val">NT$34,557</div><div class="small">目前已估價、尚未付款</div>
-  </button>
-  <button class="budget-card total budget-filter-card" type="button" data-budget-filter="priced" aria-expanded="false">
-   <div class="budget-card-head"><span class="small">目前已列項目合計</span><span class="budget-chevron">⌄</span></div>
-   <div class="val">NT$167,851</div><div class="small">不含「待確認／未計價」項目</div>
-  </button>
- </div>
- <div id="budgetDetailPanel" class="budget-detail-panel" hidden></div>
- <div class="notice"><b>匯率固定採 ¥1 = NT$0.20305。</b><br>
- 目前合計是「可計算下限」，尚未納入：1/29 白川鄉→名古屋日期別票價、共榮窯餐費、Dormy Inn Premium Otaru 房價、札幌公園飯店房價、2/3 晚餐等未提供金額。</div>
- <div id="fullBudgetTableWrap" hidden><div id="budgetMobileCards" class="budget-mobile-cards"></div><div class="budget-table-wrap">
-  <table class="budget-table">
-   <thead><tr><th>日期</th><th>分類</th><th>項目</th><th>日圓</th><th>台幣</th><th>付款狀態</th><th>備註</th></tr></thead>
-   <tbody><tr><td>1/25</td><td>台灣交通</td><td>機場接送 新店區公所→桃園T1</td><td></td><td>NT$1,200</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>1/25</td><td>機票</td><td>桃園→名古屋 IT206</td><td></td><td>NT$33,077</td><td><span class='budget-status s-已付款'>已付款</span></td><td>實付</td></tr>
-<tr><td>1/25</td><td>住宿</td><td>名古屋觀光飯店</td><td></td><td>NT$5,447</td><td><span class='budget-status s-待扣款'>待扣款</span></td><td>實際房價</td></tr>
-<tr><td>1/25</td><td>機場交通</td><td>中部機場→名古屋觀光飯店</td><td>¥6,000</td><td>NT$1,218</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥2,000×3</td></tr>
-<tr><td>1/25</td><td>市區交通</td><td>名古屋當日交通預算</td><td>¥1,200</td><td>NT$244</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>1/25</td><td>景點</td><td>SKY PROMENADE（機動）</td><td>¥3,000</td><td>NT$609</td><td><span class='budget-status s-未付款'>未付款</span></td><td>可刪</td></tr>
-<tr><td>1/26</td><td>住宿</td><td>名古屋觀光飯店</td><td></td><td>NT$5,637</td><td><span class='budget-status s-待扣款'>待扣款</span></td><td>實際房價</td></tr>
-<tr><td>1/26</td><td>市區交通</td><td>名古屋市區交通</td><td>¥2,400</td><td>NT$487</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>1/26</td><td>景點</td><td>名古屋城／本丸御殿</td><td>¥3,000</td><td>NT$609</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥1,000×3</td></tr>
-<tr><td>1/26</td><td>景點</td><td>名古屋港水族館</td><td>¥6,090</td><td>NT$1,237</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥2,030×3</td></tr>
-<tr><td>1/26</td><td>景點</td><td>MIRAI TOWER</td><td>¥3,900</td><td>NT$792</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥1,300×3</td></tr>
-<tr><td>1/27</td><td>住宿</td><td>名古屋觀光飯店</td><td></td><td>NT$6,966</td><td><span class='budget-status s-待扣款'>待扣款</span></td><td>實際房價</td></tr>
-<tr><td>1/27</td><td>名鐵</td><td>名鐵名古屋↔犬山遊園</td><td>¥4,140</td><td>NT$841</td><td><span class='budget-status s-未付款'>未付款</span></td><td>3人往返</td></tr>
-<tr><td>1/27</td><td>市區交通</td><td>名古屋當日交通</td><td>¥600</td><td>NT$122</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>1/27</td><td>景點</td><td>犬山城</td><td>¥3,000</td><td>NT$609</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥1,000×3</td></tr>
-<tr><td>1/28</td><td>住宿</td><td>名古屋觀光飯店</td><td></td><td>NT$5,757</td><td><span class='budget-status s-待扣款'>待扣款</span></td><td>實際房價</td></tr>
-<tr><td>1/28</td><td>交通</td><td>伏見↔藤が丘＋Linimo↔愛・地球博記念公園</td><td>¥4,260</td><td>NT$865</td><td><span class='budget-status s-未付款'>未付款</span></td><td>現行票價估算×3</td></tr>
-<tr><td>1/28</td><td>景點</td><td>吉卜力公園 Premium</td><td>¥21,900</td><td>NT$4,447</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥7,300×3</td></tr>
-<tr><td>1/29</td><td>住宿</td><td>名古屋觀光飯店</td><td></td><td>NT$6,005</td><td><span class='budget-status s-待扣款'>待扣款</span></td><td>實際房價</td></tr>
-<tr><td>1/29</td><td>JR</td><td>名古屋→高山 特急ひだ指定席</td><td>¥18,420</td><td>NT$3,740</td><td><span class='budget-status s-未付款'>未付款</span></td><td>現行通常期¥6,140×3；2027實價待確認</td></tr>
-<tr><td>1/29</td><td>巴士</td><td>高山→白川鄉</td><td>¥8,700</td><td>NT$1,767</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥2,900×3</td></tr>
-<tr><td>1/29</td><td>接駁</td><td>白川鄉展望台接駁</td><td>¥900</td><td>NT$183</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥300×3</td></tr>
-<tr><td>1/29</td><td>巴士</td><td>白川鄉→名古屋 16:30</td><td>待確認</td><td></td><td><span class='budget-status s-待確認'>待確認</span></td><td>日期別運價，尚未開賣</td></tr>
-<tr><td>1/30</td><td>住宿</td><td>Centrair Hotel</td><td></td><td>NT$5,156</td><td><span class='budget-status s-待扣款'>待扣款</span></td><td>實際房價</td></tr>
-<tr><td>1/30</td><td>機場交通</td><td>名古屋觀光飯店→中部機場</td><td>¥6,000</td><td>NT$1,218</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥2,000×3</td></tr>
-<tr><td>1/30</td><td>名鐵</td><td>中部國際空港↔常滑</td><td>¥1,980</td><td>NT$402</td><td><span class='budget-status s-未付款'>未付款</span></td><td>3人往返</td></tr>
-<tr><td>1/30</td><td>景點</td><td>FLIGHT OF DREAMS / Flight Park</td><td>¥0</td><td>NT$0</td><td><span class='budget-status s-未付款'>未付款</span></td><td>免費</td></tr>
-<tr><td>1/30</td><td>餐食</td><td>共榮窯</td><td>待確認</td><td></td><td><span class='budget-status s-待確認'>待確認</span></td><td>17:30待訂，餐費未估</td></tr>
-<tr><td>1/31</td><td>機票</td><td>名古屋→新千歲 JL3101</td><td></td><td>NT$8,169</td><td><span class='budget-status s-已付款'>已付款</span></td><td>實付</td></tr>
-<tr><td>1/31</td><td>JR</td><td>新千歲→小樽 U Seat</td><td>¥9,120</td><td>NT$1,852</td><td><span class='budget-status s-未付款'>未付款</span></td><td>舊預算基準</td></tr>
-<tr><td>1/31</td><td>公車</td><td>小樽站↔天狗山</td><td>¥1,440</td><td>NT$292</td><td><span class='budget-status s-未付款'>未付款</span></td><td>3人往返</td></tr>
-<tr><td>1/31</td><td>景點</td><td>天狗山纜車</td><td>¥6,000</td><td>NT$1,218</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥2,000×3</td></tr>
-<tr><td>1/31</td><td>住宿</td><td>Dormy Inn Premium Otaru</td><td>待提供</td><td></td><td><span class='budget-status s-未計價'>未計價</span></td><td>目前未提供房價</td></tr>
-<tr><td>2/1</td><td>JR</td><td>小樽→札幌 U Seat</td><td>¥5,400</td><td>NT$1,096</td><td><span class='budget-status s-未付款'>未付款</span></td><td>舊預算基準</td></tr>
-<tr><td>2/1</td><td>市區交通</td><td>札幌地鐵等</td><td>¥1,260</td><td>NT$256</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>2/1</td><td>住宿</td><td>札幌公園飯店</td><td>待提供</td><td></td><td><span class='budget-status s-未計價'>未計價</span></td><td>目前未提供房價</td></tr>
-<tr><td>2/2</td><td>一日團</td><td>支笏湖＋洞爺湖＋有珠山＋登別</td><td>¥26,595</td><td>NT$5,400</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預算表原值</td></tr>
-<tr><td>2/2</td><td>市區交通</td><td>飯店↔集合地點</td><td>¥630</td><td>NT$128</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>2/3</td><td>市區交通</td><td>札幌市區</td><td>¥3,270</td><td>NT$664</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>2/3</td><td>景點</td><td>赤煉瓦</td><td>¥900</td><td>NT$183</td><td><span class='budget-status s-未付款'>未付款</span></td><td>¥300×3</td></tr>
-<tr><td>2/3</td><td>景點</td><td>時計台＋札幌電視塔</td><td>¥3,900</td><td>NT$792</td><td><span class='budget-status s-未付款'>未付款</span></td><td>舊預算基準</td></tr>
-<tr><td>2/3</td><td>餐食</td><td>和牛＋帝王蟹</td><td>待提供</td><td></td><td><span class='budget-status s-未計價'>未計價</span></td><td>尚未提供餐價</td></tr>
-<tr><td>2/4</td><td>JR</td><td>札幌→新千歲 U Seat</td><td>¥6,690</td><td>NT$1,358</td><td><span class='budget-status s-未付款'>未付款</span></td><td>舊預算基準</td></tr>
-<tr><td>2/4</td><td>市區交通</td><td>中島公園→札幌站等</td><td>¥630</td><td>NT$128</td><td><span class='budget-status s-未付款'>未付款</span></td><td>預估</td></tr>
-<tr><td>2/4</td><td>機票</td><td>新千歲→桃園 BR165</td><td></td><td>NT$57,080</td><td><span class='budget-status s-已付款'>已付款</span></td><td>實付</td></tr>
-</tbody>
-  </table>
- </div></div>
-
-
-</section>
 
 </div>
 
@@ -5916,143 +5835,6 @@ document.addEventListener("touchend",e=>{
  if(dx>85 && Math.abs(dy)<65) goHomeFromBrand();
 },{passive:true});
 
-
-function initBudgetAccordion(){
- const cards=[...document.querySelectorAll(".budget-filter-card")];
- const panel=document.getElementById("budgetDetailPanel");
- const fullTable=document.getElementById("fullBudgetTableWrap");
- const rows=[...document.querySelectorAll(".budget-table tbody tr")];
- if(!cards.length || !panel || !rows.length || !fullTable) return;
-
- function rowData(tr){
-  const td=tr.querySelectorAll("td");
-  const status=td[5]?.innerText.trim()||"";
-  const twd=td[4]?.innerText.trim()||"";
-  return {
-   date:td[0]?.innerText.trim()||"",
-   category:td[1]?.innerText.trim()||"",
-   item:td[2]?.innerText.trim()||"",
-   yen:td[3]?.innerText.trim()||"",
-   twd,
-   status,
-   note:td[6]?.innerText.trim()||""
-  };
- }
-
- function moneyValue(s){
-  const n=Number(String(s).replace(/[^\d.-]/g,""));
-  return Number.isFinite(n)?n:0;
- }
-
- function closeAll(){
-  cards.forEach(c=>c.setAttribute("aria-expanded","false"));
-  panel.hidden=true;
-  panel.innerHTML="";
-  fullTable.hidden=true;
- }
-
- cards.forEach(card=>card.addEventListener("click",()=>{
-  const alreadyOpen=card.getAttribute("aria-expanded")==="true";
-  closeAll();
-  if(alreadyOpen) return;
-
-  const filter=card.dataset.budgetFilter;
-  card.setAttribute("aria-expanded","true");
-
-  if(filter==="priced"){
-   fullTable.hidden=false;
-   requestAnimationFrame(()=>fullTable.scrollIntoView({behavior:"smooth",block:"nearest"}));
-   return;
-  }
-
-  const matched=rows.map(rowData).filter(r=>r.status===filter);
-  const title=filter;
-  const total=matched.reduce((sum,r)=>sum+moneyValue(r.twd),0);
-
-  panel.innerHTML=`
-   <div class="budget-detail-title">
-    <span>${title}細項・${matched.length} 筆</span>
-    <span>${total ? `NT$${total.toLocaleString("en-US")}` : ""}</span>
-   </div>
-   <div class="budget-detail-list">
-    ${matched.map(r=>`
-     <div class="budget-detail-item">
-      <div class="budget-detail-date">${r.date}</div>
-      <div>
-       <div class="budget-detail-name">${r.category}｜${r.item}</div>
-       <div class="budget-detail-meta">${[r.yen,r.status,r.note].filter(Boolean).join("・")}</div>
-      </div>
-      <div class="budget-detail-amount">${r.twd||"金額待確認"}</div>
-     </div>
-    `).join("")}
-   </div>`;
-  panel.hidden=false;
-  requestAnimationFrame(()=>panel.scrollIntoView({behavior:"smooth",block:"nearest"}));
- }));
-}
-initBudgetAccordion();
-
-
-function initBudgetMobileCards(){
- const root=document.getElementById("budgetMobileCards");
- if(!root)return;
- const rows=[...document.querySelectorAll(".budget-table tbody tr")];
- root.innerHTML=rows.map(tr=>{
-  const td=tr.querySelectorAll("td");
-  const date=td[0]?.innerText.trim()||"";
-  const category=td[1]?.innerText.trim()||"";
-  const item=td[2]?.innerText.trim()||"";
-  const yen=td[3]?.innerText.trim()||"";
-  const twd=td[4]?.innerText.trim()||"";
-  const status=td[5]?.innerText.trim()||"";
-  const note=td[6]?.innerText.trim()||"";
-  return `<div class="budget-mobile-card">
-   <div class="budget-mobile-head">
-    <div><div class="budget-mobile-date">${date}</div><div class="budget-mobile-title">${category}｜${item}</div></div>
-    <div class="budget-mobile-amount">${twd||"待確認"}</div>
-   </div>
-   <div class="budget-mobile-meta">${[yen,note].filter(Boolean).join("・")}</div>
-   ${status?`<span class="budget-mobile-status">${status}</span>`:""}
-  </div>`;
- }).join("");
-}
-initBudgetMobileCards();
-
-
-document.addEventListener("DOMContentLoaded",()=>{
- const btn=document.getElementById("budgetBackTop");
- const budget=document.getElementById("budget");
- if(!btn || !budget)return;
-
- function updateBudgetBackTop(){
-  const isBudgetActive=budget.classList.contains("active");
-  if(!isBudgetActive){
-   btn.classList.remove("is-visible");
-   return;
-  }
-
-  const budgetTop=budget.getBoundingClientRect().top + window.scrollY;
-  btn.classList.toggle("is-visible", window.scrollY > budgetTop + 260);
- }
-
- btn.addEventListener("click",()=>{
-  window.scrollTo({
-   top:0,
-   behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
-  });
- });
-
- window.addEventListener("scroll",updateBudgetBackTop,{passive:true});
- window.addEventListener("resize",updateBudgetBackTop,{passive:true});
-
- document.querySelectorAll(".section-tool-btn[data-target], [data-back-home], .brand-home").forEach(el=>{
-  el.addEventListener("click",()=>setTimeout(updateBudgetBackTop,80));
- });
-
- setTimeout(updateBudgetBackTop,120);
-});
-
-
 document.addEventListener("DOMContentLoaded",()=>{
  const backdrop=document.getElementById("attractionSheetBackdrop");
  const closeBtn=document.getElementById("attractionSheetClose");
@@ -6065,7 +5847,13 @@ document.addEventListener("DOMContentLoaded",()=>{
   "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
  }[c]));
 
- let attractionSheetHistoryActive=false;
+ // Never leave a stale modal hash after refresh/direct open.
+ if(location.hash===DETAIL_HASH && !backdrop.classList.contains("open")){
+  try{history.replaceState(history.state||{},"",location.pathname+location.search);}catch(_){}
+ }
+
+ const DETAIL_HASH="#detail";
+ let attractionSheetHashActive=false;
 
  function hideAttractionSheetOnly(){
   backdrop.classList.remove("open");
@@ -6077,12 +5865,14 @@ document.addEventListener("DOMContentLoaded",()=>{
   const wasOpen=backdrop.classList.contains("open");
   hideAttractionSheetOnly();
 
-  // X / backdrop / swipe / Escape should also remove the modal's history layer.
-  if(!fromHistory && wasOpen && attractionSheetHistoryActive && history.state?.attractionSheet){
-   attractionSheetHistoryActive=false;
+  // For local HTML / Android WebView, a hash entry is more reliable than
+  // pushState alone. X / backdrop / swipe / Escape remove that same-page
+  // history entry; Android Back removes it natively.
+  if(!fromHistory && wasOpen && attractionSheetHashActive && location.hash===DETAIL_HASH){
+   attractionSheetHashActive=false;
    try{history.back();return;}catch(_){}
   }
-  attractionSheetHistoryActive=false;
+  attractionSheetHashActive=false;
  }
 
  function openAttractionSheet(name){
@@ -6150,31 +5940,34 @@ document.addEventListener("DOMContentLoaded",()=>{
   backdrop.setAttribute("aria-hidden","false");
   document.body.classList.add("attraction-sheet-open");
 
-  // Add one history layer for the open modal so Android/browser Back closes
-  // the sheet first instead of leaving the website.
-  if(!history.state?.attractionSheet){
+  // Add a same-document hash entry. This is reliable even when the HTML
+  // is opened locally on Android, and makes the system Back key close
+  // 景點介紹 / 餐食推薦 before leaving the page.
+  if(location.hash!==DETAIL_HASH){
    try{
-    history.pushState({
-     ...(history.state||{}),
-     appPage:activePageId(),
-     attractionSheet:true
-    },"");
-    attractionSheetHistoryActive=true;
+    location.hash="detail";
+    attractionSheetHashActive=true;
    }catch(_){
-    attractionSheetHistoryActive=false;
+    attractionSheetHashActive=false;
    }
   }else{
-   attractionSheetHistoryActive=true;
+   attractionSheetHashActive=true;
   }
  }
 
- window.addEventListener("popstate",()=>{
-  if(backdrop.classList.contains("open")){
+ // Android/browser Back from #detail returns to the previous same-page URL.
+ // hashchange is the primary signal; popstate is kept as a fallback because
+ // browser/WebView implementations differ.
+ function syncDetailSheetWithUrl(){
+  if(location.hash!==DETAIL_HASH && backdrop.classList.contains("open")){
    closeAttractionSheet({fromHistory:true});
-  }else{
-   attractionSheetHistoryActive=false;
   }
- });
+  if(location.hash!==DETAIL_HASH){
+   attractionSheetHashActive=false;
+  }
+ }
+ window.addEventListener("hashchange",syncDetailSheetWithUrl);
+ window.addEventListener("popstate",syncDetailSheetWithUrl);
 
  document.addEventListener("click",e=>{
   const btn=e.target.closest(".attraction-intro-btn");
