@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fffaf3">
 <title>名古屋・北海道｜2027 冬旅</title>
-<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000fd9c820685d3d5dd2777643d%26fn%3Dindex1_desktop_fixed_v2.html%26cd%3Dattachment%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3D609bdb8536f263d2b4fce70092a3426faa33818d567b4d34e92a3d93ad7150c3%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_000000009d608206ba2dfbc7ccd20bd8%26fn%3Dindex1_desktop_fixed_v3.html%26cd%3Dattachment%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3D95068e73edb9a7674baffd494e1089530002ab6adb3e0cefb9fc23300cde6aeb%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
 <style>
 :root{
  --paper:#fffaf3;--paper2:#fff6ea;--ink:#35312f;--muted:#817873;
@@ -3345,6 +3345,19 @@ body.attraction-sheet-open{overflow:hidden}
   }
 }
 
+
+/* ===== Split playback: group → rejoin → common timeline ===== */
+.rejoin-card.playback-current{
+  border-color:#53b8ff !important;
+  box-shadow:
+    0 0 0 4px rgba(63,169,255,.14),
+    0 12px 28px rgba(29,98,158,.12) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(239,247,255,.96)) !important;
+}
+.rejoin-card.playback-current b{
+  color:#075fae !important;
+}
+
 </style>
 </head>
 <body>
@@ -3729,7 +3742,7 @@ function routeLabelLayout(p,label,i){
  return {x,y,anchor,txt};
 }
 
-function renderRouteStoryMap(d,idx,items,photo,label,groupKey=""){
+function renderRouteStoryMap(d,idx,items,photo,label,groupKey="",playbackMeta=[]){
  const picks=routeMapItems(items), pts=routePoints(picks.length);
  const id=`route-${d.date.replace('/','')}-${groupKey||'main'}`;
  const nodes=picks.map((o,i)=>{
@@ -3744,7 +3757,10 @@ function renderRouteStoryMap(d,idx,items,photo,label,groupKey=""){
  }).join("");
  const path=pts.map(p=>`${p[0]},${p[1]}`).join(" ");
  const first=pts[0]||[80,190];
- const data=encodeURIComponent(JSON.stringify(picks.map((o,i)=>({time:o.x[0],title:o.x[2],x:pts[i][0],y:pts[i][1],eventIndex:o.index}))));
+ const data=encodeURIComponent(JSON.stringify(picks.map((o,i)=>{
+  const meta=playbackMeta[o.index]||{segment:"group",localIndex:o.index};
+  return {time:o.x[0],title:o.x[2],x:pts[i][0],y:pts[i][1],eventIndex:o.index,segment:meta.segment,localIndex:meta.localIndex};
+ })));
  return `<div class="trip-map illustrated-map route-story-map" data-route-map data-route-data="${data}">
   <div class="map-stage">
    <svg viewBox="0 0 820 270" role="img" aria-label="${esc(label)} 行程路線圖">
@@ -3775,9 +3791,14 @@ function renderSplitRoutes(d){
    ...(cfg.rejoin ? [[cfg.rejoin.time||"集合","集合",cfg.rejoin.title||"集合",cfg.rejoin.note||""]] : []),
    ...(cfg.commonItems||[])
   ];
+  const playbackMeta=[
+   ...g.items.map((_,i)=>({segment:"group",localIndex:i})),
+   ...(cfg.rejoin ? [{segment:"rejoin",localIndex:0}] : []),
+   ...(cfg.commonItems||[]).map((_,i)=>({segment:"common",localIndex:i}))
+  ];
   return `<section class="split-panel ${k===cfg.defaultGroup?"active":""}" data-group-panel="${k}">
    <div class="split-route-head"><div><span class="split-route-eyebrow">${esc(eyebrow)}</span><b>${esc(g.title)}</b><span>${esc(g.sub||"")}</span></div></div>
-   <div class="split-map-wrap">${renderRouteStoryMap(d,idx,mergedItems,photo,g.title,k)}</div>
+   <div class="split-map-wrap">${renderRouteStoryMap(d,idx,mergedItems,photo,g.title,k,playbackMeta)}</div>
    <div class="split-map-note">上方路線圖已包含「分流前段＋集合＋共同時程」</div>
    <div class="split-timeline-shell">${renderGroupTimeline(d,g.items)}</div>
   </section>`;
@@ -5691,10 +5712,26 @@ function initRouteMapPlayers(){
    nowTime.textContent=p.time; nowTitle.textContent=p.title;
    if(marker){marker.setAttribute("cx",p.x);marker.setAttribute("cy",p.y);}
    pois.forEach((el,i)=>el.classList.toggle("active",i===n));
-   const scope=root.closest(".split-panel")||document.getElementById("homeDayCard");
-   scope?.querySelectorAll(".event.playback-current").forEach(el=>el.classList.remove("playback-current"));
+   const panel=root.closest(".split-panel");
+   const splitWrap=root.closest("[data-split-day]");
+   const scope=panel||document.getElementById("homeDayCard");
+
+   // Clear previous playback state across the entire split day, including common timeline.
+   splitWrap?.querySelectorAll(".event.playback-current").forEach(el=>el.classList.remove("playback-current"));
+   splitWrap?.querySelectorAll(".rejoin-card.playback-current").forEach(el=>el.classList.remove("playback-current"));
+   if(!splitWrap){
+    scope?.querySelectorAll(".event.playback-current").forEach(el=>el.classList.remove("playback-current"));
+   }
+
    if(highlight){
-    const ev=scope?.querySelector(`[data-event-index="${p.eventIndex}"]`);
+    let ev=null;
+    if(splitWrap && p.segment==="common"){
+     ev=splitWrap.querySelector(`.split-common [data-event-index="${p.localIndex}"]`);
+    }else if(splitWrap && p.segment==="rejoin"){
+     ev=splitWrap.querySelector(".rejoin-card");
+    }else{
+     ev=scope?.querySelector(`[data-event-index="${p.localIndex ?? p.eventIndex}"]`);
+    }
     ev?.classList.add("playback-current");
    }
   }
