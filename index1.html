@@ -3129,6 +3129,45 @@ body.attraction-sheet-open{overflow:hidden}
  }
 }
 
+
+/* ===== Flight groups ===== */
+.flight-groups{display:grid;gap:18px}
+.flight-group{
+  border:1px solid rgba(255,255,255,.82);
+  border-radius:24px;
+  background:rgba(255,255,255,.42);
+  box-shadow:0 10px 26px rgba(33,92,148,.07),inset 0 1px 0 rgba(255,255,255,.9);
+  padding:12px;
+}
+.flight-group-head{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  padding:4px 6px 11px;
+}
+.flight-group-kicker{
+  font-size:12px;
+  font-weight:850;
+  color:#6e8aa0;
+  letter-spacing:.04em;
+}
+.flight-group-head b{
+  font-size:18px;
+  color:#123553;
+  line-height:1.25;
+}
+.flight-group-head small{
+  font-size:12.5px;
+  color:#7890a5;
+  font-weight:700;
+}
+.flight-group .flight-stack{display:grid;gap:12px}
+@media(max-width:640px){
+  .flight-groups{gap:15px}
+  .flight-group{border-radius:21px;padding:10px}
+  .flight-group-head b{font-size:17px}
+}
+
 </style>
 </head>
 <body>
@@ -3623,6 +3662,43 @@ function flightCard(f){
  </article>`;
 }
 
+
+function renderFlightGroups(){
+ const root=document.getElementById("allFlightsList");
+ if(!root)return;
+ const groups=[
+  {
+   kicker:"01/25 出發",
+   title:"名古屋・北海道行程",
+   route:"IT206 → JL3101 → BR165",
+   nos:["IT206","JL3101","BR165"]
+  },
+  {
+   kicker:"01/31 出發",
+   title:"北海道行程",
+   route:"CI2130 → CI2131",
+   nos:["CI2130","CI2131"]
+  }
+ ];
+ root.classList.remove("flight-stack");
+ root.classList.add("flight-groups");
+ root.innerHTML=groups.map(g=>{
+  const cards=g.nos
+   .map(no=>flights.find(f=>f.no===no))
+   .filter(Boolean)
+   .map(flightCard)
+   .join("");
+  return `<section class="flight-group">
+   <div class="flight-group-head">
+    <span class="flight-group-kicker">${g.kicker}</span>
+    <b>${g.title}</b>
+    <small>${g.route}</small>
+   </div>
+   <div class="flight-stack">${cards}</div>
+  </section>`;
+ }).join("");
+}
+
 function parseFlightDate(s){
  const m=String(s).match(/(\d{2})\/(\d{2})/);
  if(!m)return null;
@@ -3678,7 +3754,7 @@ function renderSmartHomeFlight(){
  root.innerHTML="";
 }
 renderSmartHomeFlight();
-document.getElementById("allFlightsList").innerHTML=flights.map(flightCard).join("");
+renderFlightGroups();
 
 
 
