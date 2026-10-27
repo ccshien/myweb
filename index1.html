@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fffaf3">
 <title>名古屋・北海道｜2027 冬旅</title>
-<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_000000003b10820699bb4a497491c6c9%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3D2d6522493087e63402b7badde10732e72b6de28c07c7c0449df18e8cad109d58%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793088397967&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000f914820692247253bae14fbc%26fn%3Dindex1_flightgroups_clean.html%26cd%3Dattachment%26ts%3D498080%26p%3Dfs%26cid%3D1%26sig%3D1aa938fb8798828d34795882677f73dd0d6dc70da7f188395afe2ab0d2dda0cf%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
 <style>
 :root{
  --paper:#fffaf3;--paper2:#fff6ea;--ink:#35312f;--muted:#817873;
@@ -3369,6 +3369,276 @@ body.attraction-sheet-open{overflow:hidden}
   user-select:none;
 }
 
+
+/* ===== Flight groups v2: stronger visual separation ===== */
+.flight-groups{
+  display:grid;
+  gap:28px !important;
+}
+.flight-group{
+  position:relative;
+  overflow:hidden;
+  border:1.5px solid rgba(103,145,181,.26) !important;
+  border-radius:26px !important;
+  padding:15px !important;
+  background:rgba(255,255,255,.72) !important;
+  box-shadow:0 12px 30px rgba(36,83,124,.09), inset 0 1px 0 rgba(255,255,255,.96) !important;
+}
+.flight-group::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:6px;
+}
+.flight-group[data-flight-group="A"]{
+  border-color:rgba(66,156,221,.34) !important;
+  background:linear-gradient(180deg,rgba(239,249,255,.94),rgba(255,255,255,.78)) !important;
+}
+.flight-group[data-flight-group="A"]::before{
+  background:linear-gradient(180deg,#49b5f3,#87d2fb);
+}
+.flight-group[data-flight-group="B"]{
+  border-color:rgba(132,111,205,.30) !important;
+  background:linear-gradient(180deg,rgba(247,244,255,.96),rgba(255,255,255,.80)) !important;
+}
+.flight-group[data-flight-group="B"]::before{
+  background:linear-gradient(180deg,#8b78d7,#b7a8ef);
+}
+.flight-group-head{
+  display:block !important;
+  padding:4px 7px 14px 11px !important;
+}
+.flight-group-topline{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex-wrap:wrap;
+  margin-bottom:8px;
+}
+.flight-group-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:82px;
+  min-height:30px;
+  padding:5px 11px;
+  border-radius:999px;
+  font-size:12px;
+  line-height:1;
+  font-weight:950;
+  letter-spacing:.08em;
+}
+.flight-group[data-flight-group="A"] .flight-group-badge{
+  background:#dff3ff;
+  color:#0874b8;
+  box-shadow:inset 0 0 0 1px rgba(52,153,218,.18);
+}
+.flight-group[data-flight-group="B"] .flight-group-badge{
+  background:#eee9ff;
+  color:#654db9;
+  box-shadow:inset 0 0 0 1px rgba(113,86,190,.16);
+}
+.flight-group-date{
+  font-size:14px;
+  font-weight:850;
+  color:#587188;
+}
+.flight-group-title{
+  font-size:21px;
+  line-height:1.2;
+  font-weight:950;
+  color:#123553;
+  margin-bottom:9px;
+  letter-spacing:.01em;
+}
+.flight-group-route{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  flex-wrap:wrap;
+  font-size:13px;
+  font-weight:850;
+  color:#607b91;
+}
+.flight-route-no{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:28px;
+  padding:4px 9px;
+  border-radius:9px;
+  background:rgba(255,255,255,.88);
+  box-shadow:inset 0 0 0 1px rgba(83,120,153,.12);
+  color:#214b6c;
+}
+.flight-route-arrow{
+  opacity:.55;
+  font-weight:900;
+}
+.flight-group .flight-stack{
+  display:grid;
+  gap:12px;
+}
+@media(max-width:640px){
+  .flight-groups{gap:21px !important}
+  .flight-group{
+    border-radius:22px !important;
+    padding:11px !important;
+  }
+  .flight-group-head{
+    padding:4px 5px 12px 9px !important;
+  }
+  .flight-group-badge{
+    min-width:74px;
+    min-height:29px;
+    font-size:11.5px;
+  }
+  .flight-group-date{
+    font-size:13.5px;
+  }
+  .flight-group-title{
+    font-size:19px;
+    margin-bottom:8px;
+  }
+  .flight-group-route{
+    gap:6px;
+    font-size:12.5px;
+  }
+  .flight-route-no{
+    min-height:27px;
+    padding:4px 8px;
+  }
+}
+
+
+/* ===== Flight groups v3: unmistakable group hierarchy ===== */
+.flight-groups{
+  gap:36px !important;
+}
+.flight-group{
+  padding:0 14px 14px !important;
+  border-radius:28px !important;
+  overflow:hidden !important;
+  border-width:2px !important;
+}
+.flight-group::before{display:none !important;}
+.flight-group-head{
+  margin:0 -14px 14px !important;
+  padding:18px 22px 17px !important;
+  border-radius:26px 26px 18px 18px !important;
+  position:relative;
+  overflow:hidden;
+}
+.flight-group[data-flight-group="A"] .flight-group-head{
+  background:linear-gradient(135deg,#dff4ff 0%,#edf9ff 55%,#f8fcff 100%) !important;
+  border-bottom:2px solid rgba(45,155,222,.22);
+}
+.flight-group[data-flight-group="B"] .flight-group-head{
+  background:linear-gradient(135deg,#eee9ff 0%,#f7f3ff 58%,#fcfaff 100%) !important;
+  border-bottom:2px solid rgba(114,86,195,.20);
+}
+.flight-group-head::after{
+  content:attr(data-group-letter);
+  position:absolute;
+  right:16px;
+  top:-17px;
+  font-size:92px;
+  line-height:1;
+  font-weight:1000;
+  letter-spacing:-.08em;
+  opacity:.055;
+  pointer-events:none;
+}
+.flight-group-topline{
+  margin-bottom:10px !important;
+  position:relative;
+  z-index:1;
+}
+.flight-group-badge{
+  min-width:104px !important;
+  min-height:34px !important;
+  font-size:13px !important;
+  letter-spacing:.10em !important;
+  box-shadow:0 4px 12px rgba(28,92,139,.10), inset 0 0 0 1px rgba(255,255,255,.72) !important;
+}
+.flight-group-date{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.74);
+  box-shadow:inset 0 0 0 1px rgba(93,124,151,.12);
+  font-size:14px !important;
+}
+.flight-group-title{
+  position:relative;
+  z-index:1;
+  font-size:24px !important;
+  margin-bottom:11px !important;
+}
+.flight-group-route{
+  position:relative;
+  z-index:1;
+}
+.flight-route-no{
+  font-size:13px;
+  font-weight:950;
+  min-height:30px !important;
+  padding:5px 10px !important;
+}
+.flight-group[data-flight-group="A"]{
+  border-color:rgba(54,159,224,.38) !important;
+  box-shadow:0 16px 36px rgba(32,115,169,.11), inset 0 1px 0 rgba(255,255,255,.96) !important;
+}
+.flight-group[data-flight-group="B"]{
+  border-color:rgba(123,97,199,.34) !important;
+  box-shadow:0 16px 36px rgba(91,67,160,.10), inset 0 1px 0 rgba(255,255,255,.96) !important;
+}
+.flight-group + .flight-group{
+  margin-top:2px;
+}
+@media(max-width:640px){
+  .flight-groups{gap:28px !important;}
+  .flight-group{
+    padding:0 10px 10px !important;
+    border-radius:23px !important;
+  }
+  .flight-group-head{
+    margin:0 -10px 11px !important;
+    padding:15px 16px 14px !important;
+    border-radius:21px 21px 15px 15px !important;
+  }
+  .flight-group-head::after{
+    right:9px;
+    top:-10px;
+    font-size:72px;
+  }
+  .flight-group-badge{
+    min-width:96px !important;
+    min-height:33px !important;
+    font-size:12.5px !important;
+  }
+  .flight-group-date{
+    min-height:29px;
+    font-size:13.5px !important;
+    padding:4px 9px;
+  }
+  .flight-group-title{
+    font-size:21px !important;
+    margin-bottom:9px !important;
+  }
+  .flight-route-no{
+    font-size:12.5px;
+    min-height:29px !important;
+  }
+}
+
+
+/* ===== Flight groups clean labels ===== */
+.flight-group-badge{display:none !important;}
+.flight-group::after{content:none !important;display:none !important;}
+
 </style>
 </head>
 <body>
@@ -3972,11 +4242,18 @@ function renderFlightGroups(){
    .filter(Boolean)
    .map(flightCard)
    .join("");
-  return `<section class="flight-group">
-   <div class="flight-group-head">
-    <span class="flight-group-kicker">${g.kicker}</span>
-    <b>${g.title}</b>
-    <small>${g.route}</small>
+  const groupId=g===groups[0]?"A":"B";
+  const routeParts=g.route.split("→").map(s=>s.trim()).filter(Boolean);
+  const routeHtml=routeParts.map((no,i)=>
+   `${i?'<span class="flight-route-arrow">→</span>':''}<span class="flight-route-no">${no}</span>`
+  ).join("");
+  return `<section class="flight-group" data-flight-group="${groupId}">
+   <div class="flight-group-head" data-group-letter="${groupId}">
+    <div class="flight-group-topline">
+     <span class="flight-group-date">${g.kicker}</span>
+    </div>
+    <div class="flight-group-title">${g.title}</div>
+    <div class="flight-group-route">${routeHtml}</div>
    </div>
    <div class="flight-stack">${cards}</div>
   </section>`;
