@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fffaf3">
 <title>名古屋・北海道｜2027 冬旅</title>
-<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<script type="text/javascript" nonce="702ba39267f14a22ad131a49686" src="//local.adguard.org?ts=1793082643585&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_000000005b788206a3543412c3d4a496%26fn%3Dindex_desktop_fixed_v2.html%26cd%3Dattachment%26ts%3D498079%26p%3Dfs%26cid%3D1%26sig%3Ddabb747c097dd75b12a6f27a991d06de6d66f70382f173d9492f9db6a0516e88%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
 <style>
 :root{
  --paper:#fffaf3;--paper2:#fff6ea;--ink:#35312f;--muted:#817873;
@@ -3168,6 +3168,183 @@ body.attraction-sheet-open{overflow:hidden}
   .flight-group-head b{font-size:17px}
 }
 
+
+/* ===== Prep + Tax Refund UI ===== */
+.tax-round{
+ background:linear-gradient(180deg,#e9f7ff,#ccecff) !important;
+ color:#0875bd !important;
+ font-weight:950;
+}
+.tax-refund-hero{
+ margin-bottom:14px;
+ border:1px solid rgba(255,255,255,.88);
+ border-radius:24px;
+ padding:18px 18px 17px;
+ background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(228,246,255,.88));
+ box-shadow:0 11px 28px rgba(34,93,148,.10),inset 0 1px 0 rgba(255,255,255,.98);
+}
+.tax-refund-kicker{
+ font-size:12px;
+ font-weight:900;
+ letter-spacing:.08em;
+ color:#4f8eb7;
+ margin-bottom:5px;
+}
+.tax-refund-title{
+ font-size:21px;
+ font-weight:900;
+ line-height:1.3;
+ color:#0d3153;
+ letter-spacing:-.02em;
+}
+.tax-refund-sub{
+ margin-top:7px;
+ font-size:14px;
+ line-height:1.55;
+ color:#667f96;
+}
+.tax-step-grid{display:grid;gap:12px}
+.tax-info-card{
+ display:grid;
+ grid-template-columns:38px minmax(0,1fr);
+ gap:12px;
+ align-items:start;
+ border:1px solid rgba(153,191,218,.25);
+ border-radius:22px;
+ padding:16px;
+ background:rgba(255,255,255,.94);
+ box-shadow:0 8px 22px rgba(34,93,148,.07),inset 0 1px 0 rgba(255,255,255,.98);
+}
+.tax-step-no{
+ width:34px;height:34px;
+ border-radius:50%;
+ display:grid;place-items:center;
+ font-size:15px;font-weight:950;
+ color:#fff;
+ background:linear-gradient(180deg,#3eb1f3,#168ddd);
+ box-shadow:0 5px 12px rgba(31,143,215,.18);
+}
+.tax-info-card h3{
+ margin:1px 0 7px;
+ font-size:17px;
+ color:#143653;
+}
+.tax-info-card ul{
+ margin:0;
+ padding-left:19px;
+ color:#415f78;
+ font-size:14px;
+ line-height:1.7;
+}
+.tax-info-card li+li{margin-top:4px}
+.tax-info-card b{color:#0e5f98}
+.tax-trip-alert{
+ margin-top:14px;
+ border:1px solid rgba(228,190,88,.32);
+ border-radius:22px;
+ padding:16px;
+ background:linear-gradient(145deg,rgba(255,251,231,.97),rgba(255,246,210,.82));
+ box-shadow:0 8px 20px rgba(153,118,29,.07);
+}
+.tax-trip-alert-title{
+ font-size:12px;font-weight:900;letter-spacing:.08em;color:#a47716;
+}
+.tax-trip-alert-main{
+ margin-top:3px;
+ font-size:19px;font-weight:900;color:#604814;
+}
+.tax-trip-alert p{
+ margin:7px 0 0;
+ font-size:14px;line-height:1.65;color:#6b5a2f;
+}
+.tax-mini-note{
+ margin-top:12px;
+ display:flex;
+ flex-direction:column;
+ gap:4px;
+ border-radius:18px;
+ padding:13px 15px;
+ background:rgba(232,247,255,.72);
+ border:1px solid rgba(113,183,223,.20);
+ color:#536f87;
+ font-size:13.5px;
+ line-height:1.6;
+}
+.tax-mini-note b{color:#176eaa}
+.tax-source-links{
+ display:flex;gap:8px;flex-wrap:wrap;
+ margin-top:12px;
+}
+.tax-source-links a{
+ text-decoration:none;
+ color:#0b75bd;
+ background:rgba(255,255,255,.88);
+ border:1px solid rgba(77,158,211,.23);
+ border-radius:999px;
+ padding:8px 12px;
+ font-size:13px;
+ font-weight:800;
+}
+#prepContent .panel h3{
+ font-size:18px !important;
+ margin-bottom:6px;
+}
+#prepContent .todo-row span{
+ line-height:1.5;
+}
+@media(max-width:640px){
+ .tax-refund-title{font-size:19px}
+ .tax-info-card{grid-template-columns:34px minmax(0,1fr);gap:10px;padding:14px}
+ .tax-step-no{width:31px;height:31px;font-size:14px}
+ .tax-info-card h3{font-size:16px}
+ .tax-info-card ul,.tax-refund-sub,.tax-trip-alert p{font-size:13.5px}
+ .hero-tools.has-four .section-tool-btn{
+  font-size:13px !important;
+  padding-left:4px !important;
+  padding-right:4px !important;
+ }
+}
+
+
+/* ===== Desktop hero: preserve full original artwork; mobile unchanged ===== */
+@media (min-width:720px){
+  .hero-visual.hero-photo{
+    height:auto !important;
+    aspect-ratio:1916 / 821;
+    overflow:hidden;
+    background:#eaf5fb;
+  }
+  .hero-visual.hero-photo > img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+}
+
+
+/* ===== Route label guard + larger hero action text ===== */
+@media (min-width:720px){
+  .route-story-map .map-stage svg{
+    overflow:hidden !important;
+  }
+  .hero-tools .section-tool-btn{
+    font-size:16px !important;
+    font-weight:850 !important;
+    min-height:42px !important;
+    padding:9px 15px !important;
+  }
+}
+@media (max-width:719px){
+  .hero-tools .section-tool-btn{
+    font-size:15px !important;
+    font-weight:850 !important;
+    min-height:44px !important;
+    padding:9px 7px !important;
+    line-height:1.15 !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -3194,11 +3371,12 @@ body.attraction-sheet-open{overflow:hidden}
    
   </div>
   <div class="hero-copy">
-   <div class="hero-date hero-date-single">2027・01/25 ～ 02/04｜02/01 ～ 02/06</div>
+   <div class="hero-date hero-date-single">2027・01/25 ～ 02/04 ｜ 01/31 ～ 02/06</div>
    
    <div class="hero-tools">
     <button class="section-tool-btn" type="button" data-target="flights">✈️ 航班</button>
     <button class="section-tool-btn" type="button" data-target="prep">✓ 準備</button>
+    <button class="section-tool-btn" type="button" data-target="taxrefund">¥ 退稅</button>
    </div>
 
   </div>
@@ -3230,6 +3408,74 @@ body.attraction-sheet-open{overflow:hidden}
  <div class="section-title"><div class="round-icon" style="background:var(--green)">✓</div>出發前準備</div>
  <div id="prepContent"></div>
 </section>
+
+
+<section id="taxrefund" class="page">
+ <div class="subpage-topbar">
+  <button class="back-home-btn" type="button" data-back-home>‹ 首頁</button>
+ </div>
+ <div class="section-title"><div class="round-icon tax-round">¥</div>退稅資訊</div>
+
+ <div class="tax-refund-hero">
+  <div class="tax-refund-kicker">2027 日本免稅新制</div>
+  <div class="tax-refund-title">先付含稅價，離境確認後退稅</div>
+  <div class="tax-refund-sub">2026/11/1 起適用。這趟 2027/1～2 月行程已屬新制。</div>
+ </div>
+
+ <div class="tax-step-grid">
+  <article class="tax-info-card">
+   <div class="tax-step-no">1</div>
+   <div>
+    <h3>購物時</h3>
+    <ul>
+     <li>同一免稅店、同一天，<b>未稅合計 ¥5,000 以上</b>才符合門檻。</li>
+     <li>購買時出示護照，先支付<b>含稅價格</b>。</li>
+     <li>食品、飲料、化妝品不再要求特殊密封包裝，但在日本境內使用／食用後無法完成退稅確認。</li>
+    </ul>
+   </div>
+  </article>
+
+  <article class="tax-info-card">
+   <div class="tax-step-no">2</div>
+   <div>
+    <h3>離境時</h3>
+    <ul>
+     <li>購買後 <b>90 天內</b>，由購買者本人攜帶商品離境。</li>
+     <li>須接受海關確認；同一筆購買紀錄的商品應完整保留。</li>
+     <li>免稅品若要放托運行李，<b>先完成海關確認，再辦托運</b>。</li>
+    </ul>
+   </div>
+  </article>
+
+  <article class="tax-info-card">
+   <div class="tax-step-no">3</div>
+   <div>
+    <h3>退款</h3>
+    <ul>
+     <li>海關確認商品已攜出日本後，才退還相當於消費稅的金額。</li>
+     <li>退款由各免稅店或受託退稅業者處理，方式依店家而異。</li>
+    </ul>
+   </div>
+  </article>
+ </div>
+
+ <div class="tax-trip-alert">
+  <div class="tax-trip-alert-title">這趟特別注意</div>
+  <div class="tax-trip-alert-main">2/4 與 2/6 分批離境</div>
+  <p>免稅商品請跟著<b>實際購買／登錄護照的人</b>離境。2/4 離境者名下商品不要留在 2/6 才返台的行李中，反之亦然。</p>
+ </div>
+
+ <div class="tax-mini-note">
+  <b>簡單記法</b>
+  <span>買的時候先付稅 → 商品不要在日本用掉 → 離境前先做海關確認 → 再依店家方式收退款。</span>
+ </div>
+
+ <div class="tax-source-links">
+  <a href="https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00028.html" target="_blank" rel="noopener">官方退稅新制</a>
+  <a href="https://asset.japan.travel/image/upload/v1787044841/pdf/refundmethod_tc.pdf" target="_blank" rel="noopener">JNTO 新制中文 PDF</a>
+ </div>
+</section>
+
 
 
 
@@ -3297,7 +3543,7 @@ const itinerary=[
 
 const hotels=[["01/25–01/30","名古屋觀光飯店","〒460-8608 愛知縣名古屋市中區錦1-19-30","052-231-7711","名古屋市營地下鐵 伏見站 8／9／10 號出口，步行約 2 分鐘","🏨"],["01/30–01/31","Centrair Hotel","〒479-0881 愛知縣常滑市セントレア1-1","0569-38-1111","名鐵 中部國際空港站，出閘後約 100m；與航廈共構","✈️"],["01/31–02/01","Dormy Inn Premium Otaru","〒047-0032 北海道小樽市稻穗3-9-1","0134-21-5489","JR 函館本線 小樽站，步行約 1 分鐘","♨️"],["02/01–02/04","札幌公園飯店","〒064-8589 北海道札幌市中央區南10條西3-1-1","011-511-3131","札幌市營地下鐵南北線 中島公園站，1 號出口步行約 1 分鐘","❄️"],["02/04–02/06","HOTEL MYSTAYS Sapporo Aspen","〒060-0808 北海道札幌市北區北8條西4-5","011-700-2111","JR 札幌站北口步行約 2 分鐘；地下鐵南北線札幌站步行約 5 分鐘","🏨"]];
 
-const tasks=[["名古屋段",["吉卜力公園 Premium 票券確認","1/29 高山 → 白川鄉巴士預訂","1/29 白川鄉 → 名古屋巴士預訂","1/30 共榮窯訂位確認"]],["北海道段",["1/31 新千歲 → 小樽 JR 正式班次","1/31 天狗山纜車／巴士風雪與運行狀況","2/2 冬季一日遊集合資訊","2/2、2/3 滑雪場、課程與裝備租借","2/4 旭山動物園＋精靈露臺包車時程","2/4 BR165 與 2/6 CI2131 最終報到資訊"]],["冬季準備",["防滑／防水鞋、保暖手套與帽子","滑雪裝備與護具範圍確認","行動電源與充電線","護照與重要預訂資料離線保存"]]];
+const tasks=[["名古屋段",["吉卜力公園 Premium 票券購買／確認","1/29 高山 → 白川鄉巴士預訂","1/29 白川鄉 → 名古屋巴士預訂","1/30 共榮窯預約確認"]],["北海道段",["1/31 新千歲 → 小樽 JR 時刻／指定席確認","1/31 天狗山纜車／巴士當日運行確認","2/1 小樽 → 札幌 JR 正式時刻確認","2/2 冬季一日遊憑證／集合時間・地點確認","2/2、2/3 滑雪場／課程／裝備租借確認","2/4 包車時程／接送地點／司機聯絡方式確認"]],["冬季準備",["防滑／防水鞋；視鞋底狀況準備可拆式冰爪","保暖防水手套、圍巾／脖圍、可覆耳帽","洋蔥式穿搭；室外低溫、室內暖氣強，方便穿脫","厚襪＋至少 1 雙替換襪","滑雪日確認雪鏡、滑雪手套、護具是否包含於租借方案","行動電源＋充電線","護照、機票、住宿、巴士、一日遊等重要憑證離線保存","重要地址、住宿日文名稱與電話離線保存"]]];
 
 
 const splitGroups={"01/31":{"order":["nagoya","taipei"],"defaultGroup":"nagoya","groups":{"nagoya":{"eyebrow":"名古屋出發","icon":"✈️","title":"名古屋 → 新千歲","sub":"JL3101｜09:40 抵達新千歲","items":[["06:00","餐食","Centrair Hotel 早餐",""],["06:35","步行","步行至 T1／報到／安檢",""],["07:55","飛機","JL3101 名古屋 → 新千歲","09:40 抵達"]]},"taipei":{"eyebrow":"桃園出發","icon":"✈️","title":"桃園 → 新千歲","sub":"CI2130｜09:40 抵達新千歲","items":[["05:00","飛機","CI2130 桃園 → 新千歲","09:40 抵達"]]}},"rejoin":{"time":"10:15","title":"新千歲機場集合／前往 JR","note":"抵達後會合"},"commonItems":[["10:50","JR","新千歲 → 小樽","12:05 抵達"],["12:05後","住宿","Dormy Inn 寄放行李",""],["12:30","步行","堺町／運河周邊散步","14:00 前回到小樽站周邊"],["14:00","餐食","三角市場帝王蟹與海鮮饗宴",""],["15:30","巴士","小樽站 → 天狗山",""],["16:00","景點","天狗山夕景／夜景","日落約 16:46"],["18:15","景點","小樽運河夜景",""],["21:30～23:00","餐食","飯店夜鳴きそば",""]]},"02/02":{"order":["ski","tour"],"defaultGroup":"tour","groups":{"ski":{"eyebrow":"滑雪","icon":"🎿","title":"滑雪組","sub":"滑雪課程或自由滑｜雪場與課程待討論","items":[["06:30","餐食","飯店自助早餐",""],["07:30","接送","前往滑雪場","雪場／課程待討論"],["上午","滑雪","滑雪課程或自由滑","依程度分組"],["中午","餐食","滑雪場午餐","依現場安排"],["下午","滑雪","繼續滑雪／自由活動",""],["傍晚","接送","返回札幌","19:00 前往湯咖哩餐廳集合"]]},"tour":{"eyebrow":"冬季一日遊","icon":"🚌","title":"旅遊組","sub":"中山峠・洞爺湖・昭和新山・登別・支笏湖","items":[["07:00","餐食","飯店早餐",""],["07:50","地鐵","中島公園 → 大通","前往札幌電視塔"],["08:30","巴士","札幌電視塔 1F 集合","08:40 發車"],["09:50","景點","中山峠","約 15 分鐘"],["10:55","景點","洞爺湖展望台","約 30 分鐘"],["11:40","餐食","洞爺湖溫泉街／自由午餐","約 70 分鐘｜餐食自理"],["13:00","景點","昭和新山・熊牧場","約 40 分鐘"],["14:25","景點","登別地獄谷","約 35 分鐘"],["16:10","景點","支笏湖冰濤祭","約 60 分鐘｜16:30 起點燈｜門票自理"],["18:20","巴士","札幌電視塔前解散",""]]}},"rejoin":{"time":"19:00","title":"湯咖哩餐廳集合／晚餐","note":"店家待選"}},"02/03":{"order":["ski","tour"],"defaultGroup":"tour","groups":{"ski":{"eyebrow":"滑雪","icon":"🎿","title":"滑雪組","sub":"第二天滑雪｜課程或自由滑","items":[["06:30","餐食","飯店自助早餐",""],["07:30","接送","前往滑雪場",""],["上午","滑雪","滑雪課程或自由滑",""],["中午","餐食","滑雪場午餐","依現場安排"],["下午","滑雪","繼續滑雪／自由活動",""],["傍晚","接送","返回札幌","18:00 前往晚餐餐廳集合"]]},"tour":{"eyebrow":"札幌市區","icon":"🏙️","title":"旅遊組","sub":"北海道神宮・赤煉瓦・時計台・電視塔","items":[["08:00","餐食","飯店早餐",""],["09:00","步行","飯店出發",""],["09:30","景點","北海道神宮＋圓山",""],["11:30","餐食","午餐",""],["13:00","景點","北海道廳舊本廳舍／赤煉瓦",""],["14:15","景點","札幌時計台",""],["15:00","景點","札幌電視塔",""],["16:00","步行","地下街／狸小路自由活動",""]]}},"rejoin":{"time":"18:00","title":"和牛＋帝王蟹餐廳集合／晚餐","note":""}},"02/04":{"order":["return","continue"],"defaultGroup":"return","groups":{"return":{"eyebrow":"返台","icon":"✈️","title":"新千歲 → 桃園","sub":"BR165｜12:10 出發・16:05 抵達","items":[["07:00","餐食","飯店早餐",""],["07:30","住宿","Check-out",""],["07:40","步行","札幌公園飯店 → 中島公園站","1 號出口旁｜約 1 分鐘"],["07:47","地鐵","中島公園 → 札幌站","南北線・麻生方向｜N09 → N06"],["08:21","JR","札幌 → 新千歲機場","快速 Airport｜08:59 抵達"],["09:00","步行","新千歲機場站 → 國際線航廈","經 2F 連絡設施｜約 10 分鐘"],["09:30","步行","報到／托運／安檢／出境","預留充足時間辦理國際線手續"],["12:10","飛機","BR165 新千歲 → 桃園","16:05 抵達"],["入境後","巴士","桃園 → 新店","回程交通依當日狀況"]]},"continue":{"eyebrow":"北海道續旅","icon":"❄️","title":"旭山動物園・富良野","sub":"包車移動｜晚間入住札幌站北口","items":[["07:30","餐食","飯店自助早餐",""],["09:00","住宿","Check-out／行李交由包車處理",""],["09:30","包車","前往旭山動物園",""],["中午～下午","景點","旭山動物園","企鵝活動依當日官方公告"],["下午","包車","前往富良野",""],["下午～傍晚","景點","精靈露臺",""],["18:00後","住宿","HOTEL MYSTAYS Sapporo Aspen Check-in","冬季路況可能延後"],["晚間","餐食","知名迴轉壽司店","店家待選"]]}}}};
@@ -3393,6 +3639,12 @@ function routeLabelLayout(p,label,i){
  let x=p[0]+18, y=p[1]-10, anchor="start";
  if(p[0]>610){x=p[0]-18;anchor="end";}
  if(i%2===1 && p[1]<140) y=p[1]+30;
+
+ // Keep labels inside the 820×270 SVG viewBox.
+ y=Math.max(30,Math.min(232,y));
+ if(anchor==="start") x=Math.max(28,Math.min(650,x));
+ else x=Math.max(170,Math.min(792,x));
+
  return {x,y,anchor,txt};
 }
 
@@ -5414,14 +5666,14 @@ function initMapPlayer(){
 
 renderSelectors();initMapPlayer();
 
-const saved=JSON.parse(localStorage.getItem("tripTodoV5")||"{}");
+const saved=JSON.parse(localStorage.getItem("tripTodoV6")||"{}");
 document.getElementById("prepContent").innerHTML=tasks.map((g,gi)=>`<div class="panel"><h3>${g[0]}</h3>${g[1].map((t,ti)=>{
  const id=`${gi}-${ti}`,done=!!saved[id];
  return `<label class="todo-row ${done?"done":""}" data-id="${id}"><input type="checkbox" ${done?"checked":""}><span>${t}</span></label>`
 }).join("")}</div>`).join("");
 document.querySelectorAll(".todo-row input").forEach(cb=>cb.addEventListener("change",e=>{
- const row=e.target.closest(".todo-row"),id=row.dataset.id,s=JSON.parse(localStorage.getItem("tripTodoV5")||"{}");s[id]=e.target.checked;
- localStorage.setItem("tripTodoV5",JSON.stringify(s));row.classList.toggle("done",e.target.checked)
+ const row=e.target.closest(".todo-row"),id=row.dataset.id,s=JSON.parse(localStorage.getItem("tripTodoV6")||"{}");s[id]=e.target.checked;
+ localStorage.setItem("tripTodoV6",JSON.stringify(s));row.classList.toggle("done",e.target.checked)
 }));
 
 
