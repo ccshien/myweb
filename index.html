@@ -1996,7 +1996,7 @@ html{
  font-weight:800;
  text-decoration:none;
 }
-body.attraction-sheet-open{overflow:hidden}
+body.attraction-sheet-open{overflow:visible}
 @media(max-width:640px){
  .attraction-sheet{border-radius:22px 22px 0 0}
  .attraction-sheet-title{font-size:18px}
@@ -3777,6 +3777,61 @@ body.attraction-sheet-open{overflow:hidden}
  }
 }
 
+
+/* ===== Formal fix: consistent checklist checkbox size ===== */
+.todo-item input[type="checkbox"],
+.todo-row input[type="checkbox"],
+.check-item input[type="checkbox"],
+input[type="checkbox"][data-todo],
+input[type="checkbox"].todo-check {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  box-sizing: border-box !important;
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  flex: 0 0 24px !important;
+  margin: 2px 16px 0 0 !important;
+  padding: 0 !important;
+  border: 2px solid #8b9298 !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  vertical-align: top !important;
+  position: relative !important;
+}
+.todo-item input[type="checkbox"]:checked,
+.todo-row input[type="checkbox"]:checked,
+.check-item input[type="checkbox"]:checked,
+input[type="checkbox"][data-todo]:checked,
+input[type="checkbox"].todo-check:checked {
+  background: #168eea !important;
+  border-color: #168eea !important;
+}
+.todo-item input[type="checkbox"]:checked::after,
+.todo-row input[type="checkbox"]:checked::after,
+.check-item input[type="checkbox"]:checked::after,
+input[type="checkbox"][data-todo]:checked::after,
+input[type="checkbox"].todo-check:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 7px;
+  height: 13px;
+  border: solid #fff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+/* ===== Formal mobile Bottom Sheet behavior ===== */
+@media(max-width:640px){
+ .attraction-sheet{height:82dvh!important;max-height:82dvh!important;display:flex!important;flex-direction:column!important}
+ .attraction-sheet-handle,.attraction-sheet-head{flex:0 0 auto!important}
+ .attraction-sheet-body{flex:1 1 auto!important;min-height:0!important;max-height:none!important;overflow-y:auto!important;overscroll-behavior:contain}
+}
 </style>
 </head>
 <body>
@@ -3799,7 +3854,7 @@ body.attraction-sheet-open{overflow:hidden}
 <section id="home" class="page active">
  <div class="hero">
   <div class="hero-visual hero-photo" id="mainHeroVisual">
-   <img id="mainHeroImage" src="assets/images/hero-main.jpg" alt="名古屋與北海道冬季旅行主視覺">
+   <img id="mainHeroImage" src="assets/images/hero-main.webp" alt="名古屋與北海道冬季旅行主視覺">
    <div class="feb01-hero-copy" id="feb01HeroCopy" hidden>
     <div class="feb01-hero-date">02/01</div>
     <div class="feb01-hero-title">小樽・札幌<span>《情書》</span></div>
@@ -3921,7 +3976,7 @@ body.attraction-sheet-open{overflow:hidden}
 <script>
 const flights=[{"date":"01/25 去程","no":"IT206","from":"桃園 T1","to":"名古屋中部 T2","dep":"08:45","arr":"12:25","note":"虎航｜已付款"},{"date":"01/31 國內線","no":"JL3101","from":"名古屋中部","to":"新千歲","dep":"07:55","arr":"09:40","note":"日本航空｜已付款"},{"date":"01/31 北海道去程","no":"CI2130","from":"桃園","to":"新千歲","dep":"05:00","arr":"09:40","note":"華航"},{"date":"02/04 返台","no":"BR165","from":"新千歲","to":"桃園 T2","dep":"12:10","arr":"16:05","note":"長榮航空｜已付款"},{"date":"02/06 回程","no":"CI2131","from":"新千歲","to":"桃園","dep":"10:40","arr":"14:15","note":"華航"}];
 
-const dayPhotos={"01/25":"assets/images/day-0125.jpg","01/26":"assets/images/day-0126.jpg","01/27":"assets/images/day-0127.jpg","01/28":"assets/images/day-0128.jpg","01/29":"assets/images/day-0129.jpg","01/30":"assets/images/day-0130.jpg","01/31":"assets/images/day-0131.jpg","02/01":"assets/images/day-0201-love-letter.jpg","02/02":"assets/images/day-0202.jpg","02/03":"assets/images/day-0203.jpg","02/04":"assets/images/day-0204.jpg"};
+const dayPhotos={"01/25":"assets/images/day-0125.jpg","01/26":"assets/images/day-0126.jpg","01/27":"assets/images/day-0127.jpg","01/28":"assets/images/day-0128.jpg","01/29":"assets/images/day-0129.jpg","01/30":"assets/images/day-0130.jpg","01/31":"assets/images/day-0131.jpg","02/01":"assets/images/day-0201-love-letter.webp","02/02":"assets/images/day-0202.jpg","02/03":"assets/images/day-0203.jpg","02/04":"assets/images/day-0204.jpg"};
 
 // Group-trip v3 photo overrides: use real travel photography instead of illustrated placeholders.
 dayPhotos["02/02"]="https://rimage.gnst.jp/livejapan.com/public/img/spot/lj/00/07/lj0007707/lj0007707_5b16115f5d7e8_main.jpg?20251218151742=&q=80";
@@ -4484,22 +4539,22 @@ function mapLabelLayout(p,label){
 }
 
 const DAY_MAP_BACKDROPS=[
- "assets/images/map-bg-0125.jpg",
- "assets/images/map-bg-0126.jpg",
- "assets/images/map-bg-0127.jpg",
- "assets/images/map-bg-0128.jpg",
- "assets/images/map-bg-0129.jpg",
- "assets/images/map-bg-0130.jpg",
- "assets/images/map-bg-0131.jpg",
- "assets/images/map-bg-0201.jpg",
- "assets/images/map-bg-0202.jpg",
- "assets/images/map-bg-0203.jpg",
- "assets/images/map-bg-0204.jpg"
+ "assets/images/map-bg-0125.webp",
+ "assets/images/map-bg-0126.webp",
+ "assets/images/map-bg-0127.webp",
+ "assets/images/map-bg-0128.webp",
+ "assets/images/map-bg-0129.webp",
+ "assets/images/map-bg-0130.webp",
+ "assets/images/map-bg-0131.webp",
+ "assets/images/map-bg-0201.webp",
+ "assets/images/map-bg-0202.webp",
+ "assets/images/map-bg-0203.webp",
+ "assets/images/map-bg-0204.webp"
 ];
 
 const STATIC_DAY_MAPS={
- 5:"assets/images/route-map-0130.png",
- 6:"assets/images/route-map-0131.png"
+ 5:"assets/images/route-map-0130.webp",
+ 6:"assets/images/route-map-0131.webp"
 };
 
 function photoRouteStops(d){ return routeMapItems(d.items).map(o=>o.x); }
@@ -6158,9 +6213,9 @@ function renderDay(d,idx,preview=false){
 
 
 
-const LOVE_LETTER_HERO_0131="assets/images/hero-0131-love-letter.png";
-const LOVE_LETTER_HERO_0201="assets/images/day-0201-love-letter.jpg";
-const HOKKAIDO_HERO_0202_PLUS="assets/images/hero-hokkaido-0202-plus.png";
+const LOVE_LETTER_HERO_0131="assets/images/hero-0131-love-letter.webp";
+const LOVE_LETTER_HERO_0201="assets/images/day-0201-love-letter.webp";
+const HOKKAIDO_HERO_0202_PLUS="assets/images/hero-hokkaido-0202-plus.webp";
 const MAIN_HERO_IMG=document.getElementById("mainHeroImage");
 const MAIN_HERO_VISUAL=document.getElementById("mainHeroVisual");
 const DEFAULT_HERO_SRC=MAIN_HERO_IMG ? MAIN_HERO_IMG.getAttribute("src") : "";
@@ -6208,6 +6263,7 @@ function renderSelectors(){
   current=Number(b.dataset.i);
   renderSelectors();
   initMapPlayer();
+   window.scrollTo({top:0,left:0,behavior:"auto"});
  }));
  requestAnimationFrame(()=>{
   const active=document.querySelector(`.day-pill[data-i="${current}"]`);
@@ -6452,10 +6508,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const wasOpen=backdrop.classList.contains("open");
   hideAttractionSheetOnly();
 
-  // For local HTML / Android WebView, a hash entry is more reliable than
-  // pushState alone. X / backdrop / swipe / Escape remove that same-page
-  // history entry; Android Back removes it natively.
-  if(!fromHistory && wasOpen && attractionSheetHashActive && location.hash===DETAIL_HASH){
+  if(!fromHistory && wasOpen && attractionSheetHashActive){
    attractionSheetHashActive=false;
    try{history.back();return;}catch(_){}
   }
@@ -6568,34 +6621,21 @@ document.addEventListener("DOMContentLoaded",()=>{
   backdrop.setAttribute("aria-hidden","false");
   document.body.classList.add("attraction-sheet-open");
 
-  // Add a same-document hash entry. This is reliable even when the HTML
-  // is opened locally on Android, and makes the system Back key close
-  // 景點介紹 / 餐食推薦 before leaving the page.
-  if(location.hash!==DETAIL_HASH){
-   try{
-    location.hash="detail";
-    attractionSheetHashActive=true;
-   }catch(_){
-    attractionSheetHashActive=false;
-   }
-  }else{
+  try{
+   history.pushState({...(history.state||{}),detailSheet:true},"");
    attractionSheetHashActive=true;
-  }
- }
-
- // Android/browser Back from #detail returns to the previous same-page URL.
- // hashchange is the primary signal; popstate is kept as a fallback because
- // browser/WebView implementations differ.
- function syncDetailSheetWithUrl(){
-  if(location.hash!==DETAIL_HASH && backdrop.classList.contains("open")){
-   closeAttractionSheet({fromHistory:true});
-  }
-  if(location.hash!==DETAIL_HASH){
+  }catch(_){
    attractionSheetHashActive=false;
   }
  }
- window.addEventListener("hashchange",syncDetailSheetWithUrl);
- window.addEventListener("popstate",syncDetailSheetWithUrl);
+
+ function syncDetailSheetWithHistory(e){
+  if(backdrop.classList.contains("open") && !e.state?.detailSheet){
+   attractionSheetHashActive=false;
+   closeAttractionSheet({fromHistory:true});
+  }
+ }
+ window.addEventListener("popstate",syncDetailSheetWithHistory);
 
  document.addEventListener("click",e=>{
   const btn=e.target.closest(".attraction-intro-btn");
