@@ -1996,7 +1996,7 @@ html{
  font-weight:800;
  text-decoration:none;
 }
-body.attraction-sheet-open{overflow:hidden}
+body.attraction-sheet-open{overflow:visible}
 @media(max-width:640px){
  .attraction-sheet{border-radius:22px 22px 0 0}
  .attraction-sheet-title{font-size:18px}
@@ -3826,6 +3826,12 @@ input[type="checkbox"].todo-check:checked::after {
   transform: rotate(45deg);
 }
 
+/* ===== Formal mobile Bottom Sheet behavior ===== */
+@media(max-width:640px){
+ .attraction-sheet{height:82dvh!important;max-height:82dvh!important;display:flex!important;flex-direction:column!important}
+ .attraction-sheet-handle,.attraction-sheet-head{flex:0 0 auto!important}
+ .attraction-sheet-body{flex:1 1 auto!important;min-height:0!important;max-height:none!important;overflow-y:auto!important;overscroll-behavior:contain}
+}
 </style>
 </head>
 <body>
@@ -6257,6 +6263,7 @@ function renderSelectors(){
   current=Number(b.dataset.i);
   renderSelectors();
   initMapPlayer();
+   window.scrollTo({top:0,left:0,behavior:"auto"});
  }));
  requestAnimationFrame(()=>{
   const active=document.querySelector(`.day-pill[data-i="${current}"]`);
@@ -6501,10 +6508,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const wasOpen=backdrop.classList.contains("open");
   hideAttractionSheetOnly();
 
-  // For local HTML / Android WebView, a hash entry is more reliable than
-  // pushState alone. X / backdrop / swipe / Escape remove that same-page
-  // history entry; Android Back removes it natively.
-  if(!fromHistory && wasOpen && attractionSheetHashActive && location.hash===DETAIL_HASH){
+  if(!fromHistory && wasOpen && attractionSheetHashActive){
    attractionSheetHashActive=false;
    try{history.back();return;}catch(_){}
   }
@@ -6617,34 +6621,21 @@ document.addEventListener("DOMContentLoaded",()=>{
   backdrop.setAttribute("aria-hidden","false");
   document.body.classList.add("attraction-sheet-open");
 
-  // Add a same-document hash entry. This is reliable even when the HTML
-  // is opened locally on Android, and makes the system Back key close
-  // 景點介紹 / 餐食推薦 before leaving the page.
-  if(location.hash!==DETAIL_HASH){
-   try{
-    location.hash="detail";
-    attractionSheetHashActive=true;
-   }catch(_){
-    attractionSheetHashActive=false;
-   }
-  }else{
+  try{
+   history.pushState({...(history.state||{}),detailSheet:true},"");
    attractionSheetHashActive=true;
-  }
- }
-
- // Android/browser Back from #detail returns to the previous same-page URL.
- // hashchange is the primary signal; popstate is kept as a fallback because
- // browser/WebView implementations differ.
- function syncDetailSheetWithUrl(){
-  if(location.hash!==DETAIL_HASH && backdrop.classList.contains("open")){
-   closeAttractionSheet({fromHistory:true});
-  }
-  if(location.hash!==DETAIL_HASH){
+  }catch(_){
    attractionSheetHashActive=false;
   }
  }
- window.addEventListener("hashchange",syncDetailSheetWithUrl);
- window.addEventListener("popstate",syncDetailSheetWithUrl);
+
+ function syncDetailSheetWithHistory(e){
+  if(backdrop.classList.contains("open") && !e.state?.detailSheet){
+   attractionSheetHashActive=false;
+   closeAttractionSheet({fromHistory:true});
+  }
+ }
+ window.addEventListener("popstate",syncDetailSheetWithHistory);
 
  document.addEventListener("click",e=>{
   const btn=e.target.closest(".attraction-intro-btn");
