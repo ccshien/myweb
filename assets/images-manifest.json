@@ -1,152 +1,31 @@
-[
-  {
-    "file": "assets/images/hero-main.jpg",
-    "bytes": 409403,
-    "sha256": "bffb6c1ae706e5702299de1bab7dcc18cfb350a580b27dd6141b8b4f7276f229",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0125.jpg",
-    "bytes": 42733,
-    "sha256": "e5d9557476ad9af3ecbfe8a0f411ddb913bf09156214a4614d8a7b5e3d338a6e",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0126.jpg",
-    "bytes": 45549,
-    "sha256": "4505d00822ec820fe107e67dd08b7744cb0ffab24d52abdfdd09511f45a75a17",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0127.jpg",
-    "bytes": 42077,
-    "sha256": "c1149ab1b4cf775945755f6466dd524c2a35e520871565a9ca49209cca801e27",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0128.jpg",
-    "bytes": 44451,
-    "sha256": "d8823192864853336bf3e11fef13ffccdbfc24165cddf2b76d5174bf3181a41d",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0129.jpg",
-    "bytes": 46932,
-    "sha256": "f61605d8d12de20a31ca131f04ed15d3afb6ba7fac3e3ed55d55a001eb16298b",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0130.jpg",
-    "bytes": 42046,
-    "sha256": "79c9187b1a9fea5426a48f28b4df16c9f1409a5a482118a3bba21663c4ab50b9",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0131.jpg",
-    "bytes": 40412,
-    "sha256": "4a625aee788a73c52f8335d67ebe82019997699ff771ac19522c1d3fa04d53f9",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0201.jpg",
-    "bytes": 45052,
-    "sha256": "09d4024d7a05d5cc7bd00cd9ee46b180420048a0adac2c8095383bf178765c52",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0202.jpg",
-    "bytes": 36918,
-    "sha256": "f7b521f12f65ddb8d54edb09bd784b6a4348f133dffb77f0597dcdc2c5cd3930",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0203.jpg",
-    "bytes": 38919,
-    "sha256": "7e0cd8696c82d1319de6b1ccf0caee0abecafdd6912637f02c43d0fddbfac981",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/day-0204.jpg",
-    "bytes": 32042,
-    "sha256": "9cd2e5fa56c491d1d01cb38cc1ecb9953f12211749c78aa3388f4c192f740d2b",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0125.jpg",
-    "bytes": 36937,
-    "sha256": "edf739c8f2e3d5aa0d32e6ec99b19c260c8457bbac596e0a83fea4a63bf6e6b7",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0126.jpg",
-    "bytes": 111488,
-    "sha256": "086d6a95b5c7569f3b6800efed4a882441b4c4864c94a79bd9eb5c9001dc50bf",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0127.jpg",
-    "bytes": 117743,
-    "sha256": "1338401ccf1a202a8f25f4ee8c793b283cf5e3898216e5cf0c7e9b5609a1fb07",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0128.jpg",
-    "bytes": 117835,
-    "sha256": "d8100af0c8bea9882b6895d323bf3554da1cecf5025f26c3a35f6ba92481df05",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0129.jpg",
-    "bytes": 131445,
-    "sha256": "24062904c47e5f6acd333bc39ea19b45b7fade496a77cd439c4cfc100808a4be",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0130.jpg",
-    "bytes": 88881,
-    "sha256": "be43515f99cc9e1d4eefb5d02bb2c620c9dba41fd8c674c08fc00536ca4ca8cb",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0131.jpg",
-    "bytes": 116930,
-    "sha256": "19a7f3bedc4531bc5b10cfba7fa456da821c8a913ddeaf9af65932a4eda442e2",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0201.jpg",
-    "bytes": 120556,
-    "sha256": "8b5ddcb231964d5afb5943af96f9545c7ad2e3e3986f4501ef63dc0bf8cc2434",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0202.jpg",
-    "bytes": 118058,
-    "sha256": "9151f9f264f6d8d05510fa80dc8e54e523ead55f1767f7e175cdecec4176a56a",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0203.jpg",
-    "bytes": 123978,
-    "sha256": "9b90c53e7a2e54a68306cbee946b32eb44560c2833997a4da0e320d4b6bab301",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/map-bg-0204.jpg",
-    "bytes": 81553,
-    "sha256": "dec3c2bb67fc00e4ccf6c5b93b9caafe9d253bd229590a9f1a4e1bd7e3b326b3",
-    "format": "jpeg"
-  },
-  {
-    "file": "assets/images/route-map-0130.png",
-    "bytes": 2638382,
-    "sha256": "cbc6f897261d5e962f88b6115ed47618ad17c3ce4e597f247fee7f2bd3b33a6c",
-    "format": "png"
-  },
-  {
-    "file": "assets/images/route-map-0131.png",
-    "bytes": 2950504,
-    "sha256": "d97edfd0aefff780239a6a5f8944ff713493355f7f5f0fecba5c59e0df5aa919",
-    "format": "png"
-  }
-]
+{
+  "images": [
+    "day-0125.jpg",
+    "day-0126.jpg",
+    "day-0127.jpg",
+    "day-0128.jpg",
+    "day-0129.jpg",
+    "day-0130.jpg",
+    "day-0131.jpg",
+    "day-0201-love-letter.webp",
+    "day-0202.jpg",
+    "day-0203.jpg",
+    "day-0204.jpg",
+    "hero-0131-love-letter.webp",
+    "hero-hokkaido-0202-plus.webp",
+    "hero-main.webp",
+    "map-bg-0125.webp",
+    "map-bg-0126.webp",
+    "map-bg-0127.webp",
+    "map-bg-0128.webp",
+    "map-bg-0129.webp",
+    "map-bg-0130.webp",
+    "map-bg-0131.webp",
+    "map-bg-0201.webp",
+    "map-bg-0202.webp",
+    "map-bg-0203.webp",
+    "map-bg-0204.webp",
+    "route-map-0130.webp",
+    "route-map-0131.webp"
+  ]
+}
